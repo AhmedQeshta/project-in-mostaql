@@ -31,6 +31,7 @@ btnHamburger.addEventListener('click', function () {
 
 
 
+
 //  jquery code
 
 $(document).ready(function () {
@@ -43,30 +44,5 @@ $(document).ready(function () {
 })
 
 
-$(document).ready(function () {
-  $(".bodyInfoCard__header").owlCarousel({
-    loop: true,
-    nav: false,
-    dots: false,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    smartSpeed: 950,
-    items: 1,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1
-      },
-      900: {
-        items: 1
-      },
-      1000: {
-        items: 1
-      }
-    }
-  });
-});
 
 

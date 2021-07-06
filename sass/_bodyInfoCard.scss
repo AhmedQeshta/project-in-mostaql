@@ -1,3 +1,8 @@
+// in header
+.container__header__search{
+        display: none;  
+}
+
 .bodyInfoCard{
     display: flex;
     flex-direction: column;
@@ -6,7 +11,9 @@
        &__image{
            img{
                width: 100%;
-               min-height: 100%;
+               height: 100%;
+               max-height: 850px;
+               min-height: auto;
                max-width: 100%;
                min-width: 100%;
            }
@@ -20,14 +27,16 @@
         margin: 2rem auto;
         @include breakpoint-down(large){
             width: 95%;  
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
         &__left{
-            width: 40%;
+            width: 30%;
             height: auto;
+            // margin: 1.2rem 2.2rem;
+            padding: 2.2rem;
             @include breakpoint-down(large){
                margin: 0 auto;
-               width: 90%;
+               width: 95%;
             }
             &_card{
                display: flex;
@@ -35,8 +44,7 @@
                background-color: $white;
                box-shadow: 1px 1px 20px #b1b1ab;
                padding: 1rem 2rem;
-               margin: 1.5rem 2.5rem 1.5rem 0;
-               border-radius: 8px;
+               
                font-family: 'Tajawal', sans-serif;
                 .headCard{
                     display: flex;
@@ -46,7 +54,7 @@
                     margin-bottom: -0.5rem;
                     font-family: 'Tajawal', sans-serif;
                     .fa-calendar{
-                        margin-right: 0.8rem;
+                        margin-left: 0.8rem;
                         font-size: 1.2rem;
                     }
                 
@@ -61,7 +69,6 @@
                     
                 }
                 .priceCard{
-                    direction: rtl;
                     margin-bottom: 3rem;
                     &__title{
                         font-size: 1.3rem;
@@ -82,7 +89,7 @@
                         text-align: center;
                         color: $white;
                         display: block;
-                        background-color:$limeGreen;
+                        background-color:$btn_body;
                         padding: 0.8rem;
                         font-size: 1.4rem;
                         border-radius: 8px;
@@ -90,16 +97,16 @@
                         transition: all ease 0.3s;
                         font-family: 'Tajawal', sans-serif;
                         &:hover{
-                            background-color:$limeGreenHover;
+                            background-color:$btn_body_Hover;
                         }
                     } 
                 }
             }
         }
         &__right{
+            flex: 1;
             width: 100%;
-            height: auto;
-            direction: rtl;
+            height: 100%;
             color: $grayishBlue;
             font-family: 'Tajawal', sans-serif;
             &__title{

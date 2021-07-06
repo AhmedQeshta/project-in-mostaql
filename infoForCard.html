@@ -91,23 +91,8 @@
 
         <div class="bodyInfoCard__body">
             <!-- two card -->
-            <div class="bodyInfoCard__body__left">
-                <div class="bodyInfoCard__body__left_card">
-                    <div class="headCard">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        <p>20:30 Fri 09 Jul 2021</p>
-                    </div>
-                    <hr class="lineCard">
-                    <div class="priceCard">
-                        <p class="priceCard__title">السعر</p>
-                        <p class="priceCard__amount">399.11 USD</p>
-                    </div>
-                    <div class="linkCard">
-                        <a href="#">إحجز الأن</a>
-                    </div>
-                </div>
-            </div>
-            <div class="bodyInfoCard__body__right">
+           
+            <div class="bodyInfoCard__body__right direction-rtl">
                 <h2 class="bodyInfoCard__body__right__title">عنوان الحدث أو النشاط</h2>
                 <div>
                     <h3 class="bodyInfoCard__body__right__subTitle">المزيد من المعلومات</h3>
@@ -140,6 +125,23 @@
                     </div>
                 </div>
             </div>
+
+            <div class="bodyInfoCard__body__left">
+                <div class="bodyInfoCard__body__left_card">
+                    <div class="headCard direction-rtl">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <p>20:30 Fri 09 Jul 2021</p>
+                    </div>
+                    <hr class="lineCard">
+                    <div class="priceCard direction-rtl">
+                        <p class="priceCard__title">السعر</p>
+                        <p class="priceCard__amount">399.11 USD</p>
+                    </div>
+                    <div class="linkCard">
+                        <a href="dateTicket.html">إحجز الأن</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
    
@@ -167,6 +169,34 @@
     <script src="dist/js/owl.carousel.min.js"></script>
       <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbxCLatPD9FdoDU3Q8KhyB8esjHwS6gDY&callback=initMap"async></script>
+      <script>
+          $(document).ready(function () {
+            $(".bodyInfoCard__header").owlCarousel({
+                loop: true,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                smartSpeed: 950,
+                items: 1,
+                responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 1
+                },
+                900: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+                }
+            });
+            });
+
+      </script>
       <script>
           // google map 
         // Initialize and add the map

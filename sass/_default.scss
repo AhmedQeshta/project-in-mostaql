@@ -86,4 +86,11 @@ input[type='text']:focus{
     --animate-duration: 1.4s;
   }
   
+
+  .direction-rtl{
+    direction: rtl;
+  }
+  .direction-ltr{
+    direction: ltr;
+  }
   

@@ -2,7 +2,7 @@
     font-family: 'Tajawal', sans-serif;
     display: grid; 
     @include breakpoint-up(large){
-        width: 65%; 
+        width: 75%; 
     }
    
     @include breakpoint-down(medium){
@@ -11,24 +11,19 @@
 
     grid-template-columns: repeat(1,1fr);
     justify-content: center;
-    margin: 2rem auto;
+    margin: 1.8rem auto;
     width: 100%;
    
     &__card{
-      box-shadow: 1px 1px 15px #66666669;
-      padding: 2.5rem 1rem;
-      margin: 1rem;
-      border-radius: 8px;
-      background-color: #fcfbfb;
+      padding: 1.2rem 1rem;
       display: flex;
       font-family: 'Tajawal', sans-serif;
-
-      @include breakpoint-down(medium){
+      @include breakpoint-down(large){
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         align-self: center;
-        padding: 1.5rem 1rem;
+        padding: 1.2rem 1rem;
     }
 
       &__logo{
@@ -37,28 +32,40 @@
           justify-content: start;
           align-self: center;
           width: 100%;
-         
+          height: 100%; 
+
           img{
+            @include breakpoint-down(small){
+                height: 100%; 
+            }
               margin: 0 auto;
-              width: 100%;
-              max-width: 100%;
-              min-width: 100%;            
+              width: 100%; 
+              height: 350px; 
+               z-index: 9;
           }
       }
       &__info{
+          background-color: #fcfbfb;
+          border-left: 2px solid $btn_body;
           display: flex;
           flex-direction: column;
           justify-content: start;
-          align-items: start;
+          align-items: flex-start;
           align-self: center;
           text-align: start;
-          padding: 2rem 1rem;
+          padding: 6rem 1.5rem;
           width: 100%;
-          direction: rtl;
+          height: 100%; 
           @include breakpoint-down(medium){
+            padding: 2rem 1.5rem;
+        }
+          @include breakpoint-down(large){
             width: 100%;
-            align-items: center;
-            }
+            align-items: start;
+            border-left: 0;
+            border-bottom: 2px solid $btn_body;
+        }
+        
           &__name{
               font-size: 1.8rem;
               margin: 1rem 0 0 0;
@@ -73,9 +80,9 @@
                 border-radius: 8px;
                 font-size: 1.2rem;
                 transition:all ease 0.3s;
-                background: linear-gradient(#FB753E, #E9455F , #B13A85 );
+                background-color: $btn_body;
                 &:hover{
-                   box-shadow: 0.5px 0.5px 15px #8d8d8d70;
+                    background-color:  $btn_body_Hover;
                    color: white;
                 }
             }

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tathkartkom.com</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="dist/css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- loader  -->
+    <div id="loadingScrean" class="display">
+        <div class="loader">
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__ball"></div>
+          </div>
+    </div>
+
+
+<!-- header -->
+    <header class="container__header"> 
+        <div class="header"> 
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="dist/images/logo.png" alt="logo web page">
+                </a>
+            </div>
+            
+            <form class="header__search" action="#">
+                <i class="header__search__icon fa fa-search" aria-hidden="true"></i>
+                <input class="header__search__input" type="text" placeholder="إبحث هنا ...">
+            </form>
+            
+    
+            <div class="header__btnAuth">
+                <a class="header__btnAuth__login" href="#">دخول</a>
+                <a class="header__btnAuth__signUp" href="#">مستخدم جديد</a>
+            </div>
+
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="container__header__menu has-fade">
+            <div class="container__header__menu__btnAuth">
+                <a class="container__header__menu__btnAuth__login" href="#">دخول</a>
+                <a class="container__header__menu__btnAuth__signUp" href="#">مستخدم جديد</a>
+            </div>
+        </div>
+    </header>
+<!-- for search responsive less than medium-->
+    <div class="container__header__search">
+        <form class="container__header__search__form" action="#">
+            <i class="container__header__search__form__icon fa fa-search" aria-hidden="true"></i>
+            <input class="container__header__search__form__input" type="text" placeholder="Search">
+        </form>
+    </div>
+
+   
+    <!-- body -->
+    <div class="dateTicket__container">
+        <div class="dateTicket__container__head">
+            <p>عنوان المناسبة أو الحفلة او الحدث </p>
+            <a href="infoForCard.html">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+        
+        <form class="dateTicket__container__calender" action="#">
+            <input type="date" id="ticket_date" name="ticket_date">
+        </form>
+
+        <!-- card time -->
+        <div class="dateTicket__container__CardTime">
+            <a href="#" class="UnChecked_Time">
+                <div class="CardTime__right">
+                    <label class="Card__container">
+                        <input type="radio" name="time1" id="time1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>15:24 <i class="fas fa-clock"></i></p>
+                </div>
+                <div class="CardTime__left">
+                    <p class="CardTime__left__open">عدد التذاكر : 1</p>
+                </div>
+            </a>
+            <a href="#" class="UnChecked_Time">
+                <div class="CardTime__right">
+                    <label class="Card__container">
+                        <input type="radio" name="time1" id="time2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>15:24 <i class="fas fa-clock"></i></p>
+                </div>
+                <div class="CardTime__left">
+                    <p class="CardTime__left__close">بيعت لاكامل</p>
+                </div>
+            </a>
+            <a href="#" class="UnChecked_Time">
+                <div class="CardTime__right">
+                    <label class="Card__container">
+                        <input type="radio" name="time1" id="time1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>15:24 <i class="fas fa-clock"></i></p>
+                </div>
+                <div class="CardTime__left">
+                    <p class="CardTime__left__open">عدد التذاكر : 5</p>
+                </div>
+            </a>
+            <a href="#" class="UnChecked_Time">
+                <div class="CardTime__right">
+                    <label class="Card__container">
+                        <input type="radio" name="time1" id="time2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>15:24 <i class="fas fa-clock"></i></p>
+                </div>
+                <div class="CardTime__left">
+                    <p class="CardTime__left__close">بيعت لاكامل</p>
+                </div>
+            </a>
+        
+        </div>
+
+        <div class="dateTicket__container__CardPlanTime direction-rtl">
+            <div class="dateTicket__container__CardPlanTime__Plan">
+                <h2>الرويال</h2>
+                <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo">
+                    <p>الرويال</p>
+                    <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo__PlanMoreInfo">
+                        <p>يباع سريعا</p>
+                        <p>SAR 2,300.00</p>
+                        <p>+18</p>
+                        <a href="#">
+                            إختر المقاعد
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="dateTicket__container__CardPlanTime__Plan">
+                <h2>الماسية</h2>
+                <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo">
+                    <p>الماسية</p>
+                    <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo__PlanMoreInfo">
+                        <p>يباع سريعا</p>
+                        <p>SAR 1,100.00</p>
+                        <p>+18</p>
+                        <a href="#">
+                            إختر المقاعد
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+    </div>
+
+
+<!-- Footer -->
+    <footer class="container__footer">
+        <div class="footer">
+            <div class="footer__left">
+                <img src="dist/images/logo.png" alt="logo">
+                <p>© 2021 All rights reserved. <a href="#">privacy policy</a></p>
+            </div>
+            <div class="footer__right">
+                <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+  
+
+<!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dist/js/script.js"></script>
+
+</body>
+</html>
