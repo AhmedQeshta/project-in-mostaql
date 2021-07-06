@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+@import "default";
+
+// index page
+
+@import "header";
+@import "body";
+@import "footer";
+@import "animations";
+@import "loading";
+
+// Info For Card
+@import "bodyInfoCard";

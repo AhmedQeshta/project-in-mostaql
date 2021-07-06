@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info For Card</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="dist/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="dist/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="dist/css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- loader  -->
+    <div id="loadingScrean" class="display">
+        <div class="loader">
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__ball"></div>
+          </div>
+    </div>
+
+
+<!-- header -->
+    <header class="container__header"> 
+        <div class="header"> 
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="dist/images/logo.png" alt="logo web page">
+                </a>
+            </div>
+            
+            
+            <form class="header__search" action="#">
+                <i class="header__search__icon fa fa-search" aria-hidden="true"></i>
+                <input class="header__search__input" type="text" placeholder="إبحث هنا ...">
+            </form>
+            
+    
+            <div class="header__btnAuth">
+                <a class="header__btnAuth__login" href="#">دخول</a>
+                <a class="header__btnAuth__signUp" href="#">مستخدم جديد</a>
+            </div>
+
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="container__header__menu has-fade">
+            <div class="container__header__menu__btnAuth">
+                <a class="container__header__menu__btnAuth__login" href="#">دخول</a>
+                <a class="container__header__menu__btnAuth__signUp" href="#">مستخدم جديد</a>
+            </div>
+        </div>
+    </header>
+<!-- for search responsive less than medium-->
+    <div class="container__header__search">
+        <form class="container__header__search__form" action="#">
+            <i class="container__header__search__form__icon fa fa-search" aria-hidden="true"></i>
+            <input class="container__header__search__form__input" type="text" placeholder="Search">
+        </form>
+    </div>
+
+   
+    <!-- body -->
+    <div class="bodyInfoCard">
+        <div class="owl-carousel bodyInfoCard__header">
+            <!-- image size 1600x615  -->
+            <div class="bodyInfoCard__header__image"> 
+                <img  src="dist/images/header_image.png" alt="header image">
+            </div>
+            <div class="bodyInfoCard__header__image"> 
+                <img    src="dist/images/header_image.png" alt="header image">
+            </div>
+            <div class="bodyInfoCard__header__image"> 
+                <img   src="dist/images/header_image.png" alt="header image">
+            </div>
+            <div class="bodyInfoCard__header__image"> 
+                <img  src="dist/images/header_image.png" alt="header image">
+            </div>
+        </div>
+
+        <div class="bodyInfoCard__body">
+            <!-- two card -->
+            <div class="bodyInfoCard__body__left">
+                <div class="bodyInfoCard__body__left_card">
+                    <div class="headCard">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <p>20:30 Fri 09 Jul 2021</p>
+                    </div>
+                    <hr class="lineCard">
+                    <div class="priceCard">
+                        <p class="priceCard__title">السعر</p>
+                        <p class="priceCard__amount">399.11 USD</p>
+                    </div>
+                    <div class="linkCard">
+                        <a href="#">إحجز الأن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyInfoCard__body__right">
+                <h2 class="bodyInfoCard__body__right__title">عنوان الحدث أو النشاط</h2>
+                <div>
+                    <h3 class="bodyInfoCard__body__right__subTitle">المزيد من المعلومات</h3>
+                    <p class="bodyInfoCard__body__right__subBody">
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+    إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                    </p>
+                </div>
+                <div>
+                    <h2 class="bodyInfoCard__body__right__subTitle">الموقع</h2>
+                    <div class="bodyInfoCard__body__right__locationCard">
+                        <div class="bodyInfoCard__body__right__locationCard__map">
+                            <!-- new from api -->
+                            <div id="map"></div>
+                            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232410.1047868336!2d39.477470833670715!3d24.471320339188022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbe5197d220d5%3A0x2e54514fea3b08d9!2sMedina%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1625574188470!5m2!1sen!2s" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"> -->
+                        </iframe>
+                        </div>
+                        <div class="bodyInfoCard__body__right__locationCard__infoMap">
+                            <p class="main__location"> العنوان الرئيسي - (Four Seasons - Riyadh)</p>
+                            <p class="sub__location">
+                                <span>الشارع - (Four Seasons Hotel Riyadh At)</span>
+                                <span>المحافظة - (Kingdom Center)</span>
+                                <span>المدينة - (Riyadh)</span>
+                                <span>الدولة - (Saudi Arabia)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    
+
+
+<!-- Footer -->
+    <footer class="container__footer">
+        <div class="footer">
+            <div class="footer__left">
+                <img src="dist/images/logo.png" alt="logo">
+                <p>© 2021 All rights reserved. <a href="#">privacy policy</a></p>
+            </div>
+            <div class="footer__right">
+                <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+  
+
+<!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dist/js/owl.carousel.min.js"></script>
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbxCLatPD9FdoDU3Q8KhyB8esjHwS6gDY&callback=initMap"async></script>
+      <script>
+          // google map 
+        // Initialize and add the map
+        function initMap() {
+        // The location of Uluru
+        const location = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 12,
+            center: location,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+        });
+        }
+        // initMap();
+      </script>
+
+    <script src="dist/js/script.js"></script>
+
+</body>
+</html>

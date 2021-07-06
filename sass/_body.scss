@@ -1,0 +1,84 @@
+.body{
+    font-family: 'Tajawal', sans-serif;
+    display: grid; 
+    @include breakpoint-up(large){
+        width: 65%; 
+    }
+   
+    @include breakpoint-down(medium){
+        width: 85%;
+    }
+
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    margin: 2rem auto;
+    width: 100%;
+   
+    &__card{
+      box-shadow: 1px 1px 15px #66666669;
+      padding: 2.5rem 1rem;
+      margin: 1rem;
+      border-radius: 8px;
+      background-color: #fcfbfb;
+      display: flex;
+      font-family: 'Tajawal', sans-serif;
+
+      @include breakpoint-down(medium){
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        padding: 1.5rem 1rem;
+    }
+
+      &__logo{
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          align-self: center;
+          width: 100%;
+         
+          img{
+              margin: 0 auto;
+              width: 100%;
+              max-width: 100%;
+              min-width: 100%;            
+          }
+      }
+      &__info{
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          align-self: center;
+          text-align: start;
+          padding: 2rem 1rem;
+          width: 100%;
+          direction: rtl;
+          @include breakpoint-down(medium){
+            width: 100%;
+            align-items: center;
+            }
+          &__name{
+              font-size: 1.8rem;
+              margin: 1rem 0 0 0;
+          }
+          &__location{
+            font-size: 1.2rem;
+            margin: 0.7rem 0 1rem 0;
+            }
+            &__link{
+                padding: 0.7rem 3rem;
+                color: $white;
+                border-radius: 8px;
+                font-size: 1.2rem;
+                transition:all ease 0.3s;
+                background: linear-gradient(#FB753E, #E9455F , #B13A85 );
+                &:hover{
+                   box-shadow: 0.5px 0.5px 15px #8d8d8d70;
+                   color: white;
+                }
+            }
+      }
+    }
+}

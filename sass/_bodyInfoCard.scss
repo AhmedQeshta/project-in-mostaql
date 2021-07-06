@@ -1,0 +1,174 @@
+.bodyInfoCard{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Tajawal', sans-serif;
+    &__header{
+       &__image{
+           img{
+               width: 100%;
+               min-height: 100%;
+               max-width: 100%;
+               min-width: 100%;
+           }
+       } 
+    }
+
+    // __body
+    &__body{
+        display: flex;
+        width: 90%;
+        margin: 2rem auto;
+        @include breakpoint-down(large){
+            width: 95%;  
+            flex-direction: column-reverse;
+        }
+        &__left{
+            width: 40%;
+            height: auto;
+            @include breakpoint-down(large){
+               margin: 0 auto;
+               width: 90%;
+            }
+            &_card{
+               display: flex;
+               flex-direction: column;
+               background-color: $white;
+               box-shadow: 1px 1px 20px #b1b1ab;
+               padding: 1rem 2rem;
+               margin: 1.5rem 2.5rem 1.5rem 0;
+               border-radius: 8px;
+               font-family: 'Tajawal', sans-serif;
+                .headCard{
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    color: $grayLight;
+                    margin-bottom: -0.5rem;
+                    font-family: 'Tajawal', sans-serif;
+                    .fa-calendar{
+                        margin-right: 0.8rem;
+                        font-size: 1.2rem;
+                    }
+                
+                }
+                .lineCard{
+                    width: 100%;
+                    height: 0.05rem;
+                    border: 0;
+                    background-color: $grayLight;
+                    border-radius: 8px;
+                    margin-bottom: 2rem;
+                    
+                }
+                .priceCard{
+                    direction: rtl;
+                    margin-bottom: 3rem;
+                    &__title{
+                        font-size: 1.3rem;
+                        color: $grayLight;
+                        margin: 0 0 0.5rem 0;
+                        font-family: 'Tajawal', sans-serif;
+                        
+                    }
+                    &__amount{
+                        font-size: 1.4rem;
+                        color: $grayLight;
+                        margin: 0.2rem 0;
+                        font-family: 'Tajawal', sans-serif;
+                    }
+                }
+                .linkCard{ 
+                    a{
+                        text-align: center;
+                        color: $white;
+                        display: block;
+                        background-color:$limeGreen;
+                        padding: 0.8rem;
+                        font-size: 1.4rem;
+                        border-radius: 8px;
+                        font-weight: 700;
+                        transition: all ease 0.3s;
+                        font-family: 'Tajawal', sans-serif;
+                        &:hover{
+                            background-color:$limeGreenHover;
+                        }
+                    } 
+                }
+            }
+        }
+        &__right{
+            width: 100%;
+            height: auto;
+            direction: rtl;
+            color: $grayishBlue;
+            font-family: 'Tajawal', sans-serif;
+            &__title{
+                font-size: 2.2rem;
+                font-weight: 700;
+                margin-bottom: 4rem;
+            }
+            &__subTitle{
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin-bottom: 0.1rem;
+            }
+            &__subBody{
+                font-size: 1.2rem;
+                font-weight: 400;
+                margin-bottom: 0.1rem;
+                text-align: justify;
+            }
+            &__locationCard{
+                width: 100%;
+                display: flex;
+                margin: 0 auto;
+                padding: 2rem 0;
+                @include breakpoint-down(large){
+                    margin: 0 auto;
+                    flex-direction: column;
+                 }
+                &__map{
+                    margin-left: 2.2rem;
+                    @include breakpoint-down(large){
+                        margin: 0 auto;
+                        flex-direction: column;
+                        width: 100%;
+                     }
+                     #map {
+                        width: 550px;
+                        height: 350px;
+                        @include breakpoint-down(large){
+                            width: 100%;
+                            // height: 100%;
+                         }
+                      }
+                    iframe{
+                        width: 550px;
+                        height: 350px;
+                        @include breakpoint-down(large){
+                            width: 100%;
+                            // height: 100%;
+                         }
+                    }
+                }
+                &__infoMap{
+                    .main__location{
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                    }
+                    .sub__location{
+                        display: flex;
+                        flex-direction: column;
+                        span{
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                            &:not(:last-child){
+                                margin-bottom: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
