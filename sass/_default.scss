@@ -6,7 +6,9 @@ html {
 *, *::before, *::after {
 box-sizing: inherit;
 }
-  
+ 
+ul {list-style-type: none;}
+
 body {
     margin: 0;
     padding: 0;
@@ -17,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #eeeeee;
+    background-color: #ffffff;
 
     @include breakpoint-up(large){
         font-size: $font-med;

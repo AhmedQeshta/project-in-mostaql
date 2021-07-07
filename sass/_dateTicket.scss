@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     width: 85%;
+    margin: 0 auto;
+    direction: rtl;
     @include breakpoint-down(small){
         width: 90%;
     }
-    margin: 0 auto;
-    direction: rtl;
     &__head{
         display: flex;
         font-weight: 700;
@@ -34,7 +34,7 @@
 
     &__calender{
         display: flex;
-        
+        flex-direction: column;
         input[type='date']{
             width: 50%;
             height: 2.9rem;
@@ -52,6 +52,68 @@
                 box-shadow: 0;
             }
         }
+
+        .month {
+            padding: 10px 0px;
+            width: 100%;
+            color: $grayishBlue;
+            border-bottom: 1px solid $btn_body;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    color: $grayishBlue;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                  }
+              }
+          }
+          
+          .weekdays {
+            margin: 0;
+            padding: 10px 0;
+            background-color: #fcfcfc;
+            li {
+                display: inline-block;
+                width: 13.6%;
+                color: #666;
+                text-align: center;
+              }
+          }
+
+          .days {
+            padding: 10px 0;
+            background: #ffffff;
+            margin: 1;
+            li {
+                list-style-type: none;
+                display: inline-block;
+                width: 13.5%;
+                text-align: center;
+                margin-bottom: 5px;
+                font: size 1.4rem;
+                color: #777;
+                margin: 0.5rem auto;
+                cursor: not-allowed;
+                .active {
+                    padding: 0.3rem 0.65rem;
+                    background: $btn_body;
+                    border-radius: 50%;
+                    color: white !important;
+                    cursor: pointer; 
+                  }
+                  
+
+                  .available {
+                    padding: 0.3rem 0.65rem;
+                    border-radius: 50%;
+                    color: $btn_body !important;
+                    cursor: pointer; 
+                  }
+                  
+              }
+          }
     }
 
     &__CardTime{
@@ -176,37 +238,65 @@
                     display: flex;
                     justify-content: center;
                     align-items: center; 
-                   
+                    input[type="number"]{
+                        border: 1px solid $btn_body;
+                        width: 3rem;
+                        padding: 0.5rem;
+                        margin-left: 0.5rem;
+                        &:focus{
+                            outline: none;
+                            border: 1px solid $btn_body;
+                            box-shadow: none;
+                        }
+                    }
                     :not(:last-child){
                         margin-left: 2.5rem ;
                     }
+                    
                     :last-child{
-                        padding: 0.5rem 4.2rem; 
                         border: 1px solid $btn_body;
-                        border-radius: 10px;
+                        padding: 0.4rem 1rem;
+                        border-radius: 8px;
                         transition: all ease 0.3s;
                         &:hover{
-                            border: 1px solid $white;
-                            background-color: $btn_body;
                             color: $white;
+                            background-color: $btn_body;
                         }
-                     }
-
+                    }
                      @include breakpoint-down(medium){
                         :not(:last-child){
                             margin-left: 1rem ;
                         }
                         :last-child{
-                            padding: 0.5rem 1.6rem; 
-                            
-                          
-                         }
+                            border: 1px solid $btn_body;
+                            padding: 0.3rem 0.3rem;
+                            border-radius: 8px;
+                        }
+                        
                     }
                 }
             }
         }
         
     }
+      
+      /* Add media queries for smaller screens */
+      @media screen and (max-width:720px) {
+        .weekdays li, .days li {width: 13.1%;}
+      }
+      
+      @media screen and (max-width: 420px) {
+        .weekdays li, .days li {width: 12.5%;}
+        .days li .active {
+            // padding: 2px;
+            padding: 0.2rem 0.55rem;
+        }
+      }
+      
+      @media screen and (max-width: 290px) {
+        .weekdays li, .days li {width: 12.2%;}
+      }
+    //   
 }
 
 

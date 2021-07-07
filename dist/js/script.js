@@ -28,6 +28,26 @@ btnHamburger.addEventListener('click', function () {
 });
 
 
+const days = document.querySelectorAll('.days>li>span.available');
+days.forEach(function (element) {
+  element.addEventListener('click', function () {
+    console.log(element)
+    if (element.classList.contains('active')) {
+      element.classList.remove('active');
+      element.classList.add('available');
+    } else {
+      days.forEach(function (element) {
+        element.classList.remove('active');
+        element.classList.add('available');
+      });
+      element.classList.add('active');
+      element.classList.remove('available');
+
+    }
+
+  });
+});
+
 
 
 

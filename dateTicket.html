@@ -39,7 +39,7 @@
                 <i class="header__search__icon fa fa-search" aria-hidden="true"></i>
                 <input class="header__search__input" type="text" placeholder="إبحث هنا ...">
             </form>
-            
+
     
             <div class="header__btnAuth">
                 <a class="header__btnAuth__login" href="#">دخول</a>
@@ -60,7 +60,7 @@
         </div>
     </header>
 <!-- for search responsive less than medium-->
-    <div class="container__header__search">
+    <div class="container__header__search hidden__header__search">
         <form class="container__header__search__form" action="#">
             <i class="container__header__search__form__icon fa fa-search" aria-hidden="true"></i>
             <input class="container__header__search__form__input" type="text" placeholder="Search">
@@ -78,8 +78,65 @@
         </div>
         
         <form class="dateTicket__container__calender" action="#">
-            <input type="date" id="ticket_date" name="ticket_date">
+            <input hidden type="date" id="ticket_date" name="ticket_date">
         </form>
+
+        
+        <div class="dateTicket__container__calender ">
+            <!-- add direction-ltr in need in english -->
+            <div class="month direction-rtl">      
+                <ul>
+                  <li>
+                    <span>August</span> <span class="date__Year">2021</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <ul class="weekdays">
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+              </ul>
+              
+              <ul class="days">  
+                <li><span class="available">1</span></li>
+                <li><span class="available">2</span></li>
+                <li><span class="available">3</span></li>
+                <li><span class="available">4</span></li>
+                <li><span class="available">5</span></li>
+                <li><span class="available">6</span></li>
+                <li><span class="">7</span></li>
+                <li><span class="">8</span></li>
+                <li><span class="">9</span></li>
+                <li><span class="available">10</span></li>
+                <li><span class="">11</span></li>
+                <li><span class="available">12</span></li>
+                <li><span class="available">13</span></li>
+                <li><span class="available">14</span></li>
+                <li><span>15</span></li>
+                <li><span>16</span></li>
+                <li><span>17</span></li>
+                <li><span>18</span></li>
+                <li><span>19</span></li>
+                <li><span>20</span></li>
+                <li><span class="available">21</span></li>
+                <li><span>22</span></li>
+                <li><span class="available">23</span></li>
+                <li><span>24</span></li>
+                <li><span class="available">25</span></li>
+                <li><span>26</span></li>
+                <li><span class="available">27</span></li>
+                <li><span>28</span></li>
+                <li><span>29</span></li>
+                <li><span class="available">30</span></li>
+                <li><span>31</span></li>
+              </ul>
+        </div>
+        
 
         <!-- card time -->
         <div class="dateTicket__container__CardTime">
@@ -143,6 +200,7 @@
                         <p>يباع سريعا</p>
                         <p>SAR 2,300.00</p>
                         <p>+18</p>
+                        <input type="number" min="1" max="100" value="1" step="1">
                         <a href="#">
                             إختر المقاعد
                         </a>
@@ -157,6 +215,7 @@
                         <p>يباع سريعا</p>
                         <p>SAR 1,100.00</p>
                         <p>+18</p>
+                        <input type="number" min="1" max="100" value="1" step="1">
                         <a href="#">
                             إختر المقاعد
                         </a>

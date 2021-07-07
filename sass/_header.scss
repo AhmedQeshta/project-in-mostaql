@@ -20,9 +20,9 @@
             justify-content: center;
             align-items: center;
             img{
-                width: 10rem;
-                max-width: 10rem;
-                min-width: 10rem;
+                width: 15rem;
+                max-width: 15rem;
+                min-width: 15rem;
                 padding: 2rem;
             }
         }
@@ -150,11 +150,13 @@
     
     }
 
+   
     &__search{
         @include breakpoint-up(large){
             display: none;  
         }
-        @include breakpoint-down(medium){
+       
+        @include breakpoint-down(large){
             display: block;
             position: relative;
             padding: 0.7rem 1rem;
@@ -163,6 +165,7 @@
         }
         &__form{
             margin: 0 2rem;
+            box-shadow: 1px 1px 10px $grayLight;
             &__icon{
                 position: absolute;
                 font-size: 0.9rem;
@@ -192,6 +195,8 @@
         
         
     }
+   
+   
     &__menu{
         @include breakpoint-up(large){
             display: none;  
@@ -282,5 +287,10 @@
             }
         }
     }
+
+}
+
+.hidden__header__search{
+    display: none;  
 }
 
