@@ -198,6 +198,17 @@
 
       </script>
       <script>
+        //  jquery code
+        $(document).ready(function () {
+        $(window).on('load', function () {
+            setTimeout(function () {
+            $('#loadingScrean').addClass('displayNone');
+            $('#loadingScrean').removeClass('display');
+            }, 500); // 0.5 sec
+        })
+        })
+    </script>
+      <script>
           // google map 
         // Initialize and add the map
         function initMap() {

@@ -5,8 +5,6 @@ const overlay = document.querySelector('.overlay');
 const fadeElems = document.querySelectorAll('.has-fade');
 
 btnHamburger.addEventListener('click', function () {
-  console.log('click hamburger');
-
   if (header.classList.contains('open')) { // Close Hamburger Menu
     body.classList.remove('noscroll');
     header.classList.remove('open');
@@ -52,16 +50,7 @@ days.forEach(function (element) {
 
 
 
-//  jquery code
 
-$(document).ready(function () {
-  $(window).on('load', function () {
-    setTimeout(function () {
-      $('#loadingScrean').addClass('displayNone');
-      $('#loadingScrean').removeClass('display');
-    }, 500); // 0.5 sec
-  })
-})
 
 
 

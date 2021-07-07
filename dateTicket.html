@@ -247,6 +247,16 @@
 <!-- script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dist/js/script.js"></script>
-
+    <script>
+        //  jquery code
+        $(document).ready(function () {
+        $(window).on('load', function () {
+            setTimeout(function () {
+            $('#loadingScrean').addClass('displayNone');
+            $('#loadingScrean').removeClass('display');
+            }, 500); // 0.5 sec
+        })
+        })
+    </script>
 </body>
 </html>
