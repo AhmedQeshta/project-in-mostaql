@@ -97,7 +97,7 @@
                 margin: 0.5rem auto;
                 cursor: not-allowed;
                 .active {
-                    padding: 0.3rem 0.65rem;
+                    padding: 0.4rem 0.65rem;
                     background: $btn_body;
                     border-radius: 50%;
                     color: white !important;
@@ -108,7 +108,7 @@
                   .available {
                     padding: 0.3rem 0.65rem;
                     border-radius: 50%;
-                    color: $btn_body !important;
+                    color: $card_available_color !important;
                     cursor: pointer; 
                   }
                   
@@ -227,52 +227,119 @@
             flex-direction: column;
             &__PlanInfo{
                 display: flex;
-                justify-content: space-between;
+                justify-content: start;
                 align-items: center;
-                border-top:1px solid $grayishBlue ;
-                border-bottom:1px solid $grayishBlue ;
+                // border-top:1px solid $grayishBlue ;
+                // border-bottom:1px solid $grayishBlue ;
                 @include breakpoint-down(medium){
                     flex-direction: column;
+
+                }
+                .sub__PlanTitle{
+                    width: 30%;
                 }
                 &__PlanMoreInfo{
+                    width: 100%;
                     display: flex;
-                    justify-content: center;
+                    justify-content: start;
                     align-items: center; 
-                    input[type="number"]{
+                    .input__number{
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+                        :nth-child(2n),
+                        :nth-child(2n+1){
+                            margin: 0;
+                        }
+                        .fa-plus{
+                            padding: 0.5rem;
+                            border: 1px solid $btn_body;
+                            border-radius: 0 8px 8px 0;
+                            color: $btn_body;
+                            font-size: 1rem; 
+                            cursor: pointer;
+                            transition: all ease 0.3s;
+                            &:hover{
+                                background-color: $btn_body;
+                                color: $white;
+                            }
+                        }
+                        .fa-minus{
+                            padding: 0.5rem;
+                            border: 1px solid $btn_body;
+                            border-radius: 8px 0 0 8px;
+                            color: $btn_body;
+                            font-size: 1rem;
+                            cursor: pointer;
+                            transition: all ease 0.3s;
+                            &:hover{
+                                background-color: $btn_body;
+                                color: $white;
+                            }
+                        }
+                    }
+
+
+                    input[type="text"]{
                         border: 1px solid $btn_body;
-                        width: 3rem;
+                        border-left: 0;
+                        border-right: 0;
+                        text-align: center;
+                        width: 2.5rem;
                         padding: 0.5rem;
-                        margin-left: 0.5rem;
+                        color: $btn_body;
+                        font-weight: 700;
+                        font-size: 1rem;
                         &:focus{
                             outline: none;
                             border: 1px solid $btn_body;
                             box-shadow: none;
+                            border-left: 0;
+                        border-right: 0;
                         }
+                        &::-webkit-outer-spin-button,
+                        &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                        }
+                        -moz-appearance: textfield;
                     }
                     :not(:last-child){
                         margin-left: 2.5rem ;
                     }
                     
-                    :last-child{
-                        border: 1px solid $btn_body;
-                        padding: 0.4rem 1rem;
-                        border-radius: 8px;
-                        transition: all ease 0.3s;
-                        &:hover{
-                            color: $white;
-                            background-color: $btn_body;
-                        }
-                    }
+                    // :last-child{
+                    //     border: 1px solid $btn_body;
+                    //     padding: 0.4rem 1rem;
+                    //     border-radius: 8px;
+                    //     transition: all ease 0.3s;
+                    //     &:hover{
+                    //         color: $white;
+                    //         background-color: $btn_body;
+                    //     }
+                    // }
                      @include breakpoint-down(medium){
                         :not(:last-child){
                             margin-left: 1rem ;
                         }
-                        :last-child{
-                            border: 1px solid $btn_body;
-                            padding: 0.3rem 0.3rem;
-                            border-radius: 8px;
-                        }
+                        // :last-child{
+                        //     border: 1px solid $btn_body;
+                        //     padding: 0.3rem 0.3rem;
+                        //     border-radius: 8px;
+                        // }
                         
+                    }
+                }
+            }
+            &__linkAdd{
+                margin: 2rem 0;
+                a{
+                    padding: 1rem 2.3rem;
+                    background-color: $btn_body;
+                    color: white;
+                    transition: all ease 0.3s;
+                    &:hover{
+                        background-color: $btn_body_Hover;
                     }
                 }
             }
@@ -308,7 +375,7 @@
 }
 
 .CardTime__left__close{
-    color: #b44f4f;
+    color: $card_available_color;
     font-weight: 700;
     padding: 0.25rem 0.4rem;
 }
@@ -316,6 +383,6 @@
 .CardTime__left__open{
     color: white;
     font-weight: 700;
-    background-color: #b44f4f;
+    background-color: $card_available_color;
     padding: 0.25rem 0.4rem;
 }

@@ -134,6 +134,10 @@
                 <li><span>29</span></li>
                 <li><span class="available">30</span></li>
                 <li><span>31</span></li>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span class="available">3</span></li>
+                <li><span>4</span></li>
               </ul>
         </div>
         
@@ -193,33 +197,54 @@
 
         <div class="dateTicket__container__CardPlanTime direction-rtl">
             <div class="dateTicket__container__CardPlanTime__Plan">
-                <h2>الرويال</h2>
+                <h2>انواع التذاكر</h2>
                 <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo">
-                    <p>الرويال</p>
-                    <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo__PlanMoreInfo">
-                        <p>يباع سريعا</p>
-                        <p>SAR 2,300.00</p>
-                        <p>+18</p>
-                        <input type="number" min="1" max="100" value="1" step="1">
-                        <a href="#">
-                            إختر المقاعد
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="dateTicket__container__CardPlanTime__Plan">
-                <h2>الماسية</h2>
-                <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo">
-                    <p>الماسية</p>
+                    <p class="sub__PlanTitle">الرويال الرويال</p>
                     <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo__PlanMoreInfo">
                         <p>يباع سريعا</p>
                         <p>SAR 1,100.00</p>
                         <p>+18</p>
-                        <input type="number" min="1" max="100" value="1" step="1">
-                        <a href="#">
-                            إختر المقاعد
-                        </a>
+                        <div class="input__number">
+                            <i class="fa fa-plus plus" aria-hidden="true"></i>
+                            <input type="text" value="1">
+                            <i class="fa fa-minus minus" aria-hidden="true"></i>
+                        </div>
                     </div>
+                </div>
+                <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo">
+                    <p class="sub__PlanTitle">الماسية الماسية الماسية</p>
+                    <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo__PlanMoreInfo">
+                        <p>يباع سريعا</p>
+                        <p>SAR 1,100.00</p>
+                        <p>+18</p>
+                        <div class="input__number">
+                            <i class="fa fa-plus plus" aria-hidden="true"></i>
+                            <input type="text" value="1" >
+                            <i class="fa fa-minus minus" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo">
+                    <p class="sub__PlanTitle">الماسية الماسية الماسية</p>
+                    <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo__PlanMoreInfo">
+                        <p>يباع سريعا</p>
+                        <p>SAR 1,100.00</p>
+                        <p>+18</p>
+                        <div class="input__number">
+                            <i class="fa fa-plus plus" aria-hidden="true"></i>
+                            <input type="text"  value="1" >
+                            <i class="fa fa-minus minus" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="dateTicket__container__CardPlanTime direction-rtl">
+            <div class="dateTicket__container__CardPlanTime__Plan">
+                <div class="dateTicket__container__CardPlanTime__Plan__linkAdd">
+                    <a href="#">تأكيد العملية</a>
                 </div>
             </div>
         </div>
@@ -247,16 +272,23 @@
 <!-- script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dist/js/script.js"></script>
-    <!-- <script>
-        //  jquery code
-        $(document).ready(function () {
-        $(window).on('load', function () {
-            setTimeout(function () {
-            $('#loadingScrean').addClass('displayNone');
-            $('#loadingScrean').removeClass('display');
-            }, 500); // 0.5 sec
-        })
-        })
-    </script> -->
+    <script>
+       	$(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
+    </script>
 </body>
 </html>
