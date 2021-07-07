@@ -32,8 +32,8 @@ days.forEach(function (element) {
     if (element.classList.contains('active')) {
       element.classList.remove('active');
       element.classList.add('available');
-      
-      
+
+
     } else {
       days.forEach(function (element) {
         element.classList.remove('active');
@@ -46,6 +46,10 @@ days.forEach(function (element) {
 
   });
 });
+
+
+
+
 
 
 

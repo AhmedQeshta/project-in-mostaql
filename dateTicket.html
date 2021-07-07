@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
 </head>
 <body>
 <!-- loader  -->
@@ -82,12 +83,14 @@
         </form>
 
         
-        <div class="dateTicket__container__calender ">
-            <!-- add direction-ltr in need in english -->
+        <!-- add direction-ltr in need in english -->
+        <!-- <div class="dateTicket__container__calender ">
             <div class="month direction-rtl">      
                 <ul>
                   <li>
-                    <span>August</span> <span class="date__Year">2021</span>
+                      <i class="fa fa-arrow-right prev" aria-hidden="true"></i>
+                      <span class="month__name"></span>
+                      <i class="fa fa-arrow-left next" aria-hidden="true"></i>
                   </li>
                 </ul>
               </div>
@@ -102,44 +105,49 @@
                 <li>Su</li>
               </ul>
               
-              <ul class="days">  
-                <li><span class="available">1</span></li>
-                <li><span class="available">2</span></li>
-                <li><span class="available">3</span></li>
-                <li><span class="available">4</span></li>
-                <li><span class="available">5</span></li>
-                <li><span class="available">6</span></li>
-                <li><span class="">7</span></li>
-                <li><span class="">8</span></li>
-                <li><span class="">9</span></li>
-                <li><span class="available">10</span></li>
-                <li><span class="">11</span></li>
-                <li><span class="available">12</span></li>
-                <li><span class="available">13</span></li>
-                <li><span class="available">14</span></li>
-                <li><span>15</span></li>
-                <li><span>16</span></li>
-                <li><span>17</span></li>
-                <li><span>18</span></li>
-                <li><span>19</span></li>
-                <li><span>20</span></li>
-                <li><span class="available">21</span></li>
-                <li><span>22</span></li>
-                <li><span class="available">23</span></li>
-                <li><span>24</span></li>
-                <li><span class="available">25</span></li>
-                <li><span>26</span></li>
-                <li><span class="available">27</span></li>
-                <li><span>28</span></li>
-                <li><span>29</span></li>
-                <li><span class="available">30</span></li>
-                <li><span>31</span></li>
-                <li><span>1</span></li>
-                <li><span>2</span></li>
-                <li><span class="available">3</span></li>
-                <li><span>4</span></li>
+              <ul class="days"> 
+                    <li><span class="available">1</span></li>
+                    <li><span class="available">2</span></li>
+                    <li><span class="available">3</span></li>
+                    <li><span class="available">4</span></li>
+                    <li><span class="available">5</span></li>
+                    <li><span class="available">6</span></li>
+                    <li><span class="">7</span></li>
+                    <li><span class="">8</span></li>
+                    <li><span class="">9</span></li>
+                    <li><span class="available">10</span></li>
+         
               </ul>
-        </div>
+              
+            </div> -->
+
+
+            <!-- <div class="container"> -->
+                <div class="calendar direction-ltr">
+                    <div>
+                        <!-- give the number selected (day) for search if has date for this day -->
+                        <input hidden type="text" value="" id="input_number_day">
+                        <div class="month">
+                            <i class="fas fa-angle-left prev"></i>
+                            <div class="date">
+                              <h1></h1>
+                              <p></p>
+                            </div>
+                            <i class="fas fa-angle-right next"></i>
+                          </div>
+                          <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                          </div>
+                          <div class="days"></div>
+                    </div>
+                </div>
+              <!-- </div> -->
         
 
         <!-- card time -->
@@ -201,9 +209,7 @@
                 <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo">
                     <p class="sub__PlanTitle">الرويال الرويال</p>
                     <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo__PlanMoreInfo">
-                        <p>يباع سريعا</p>
                         <p>SAR 1,100.00</p>
-                        <p>+18</p>
                         <div class="input__number">
                             <i class="fa fa-plus plus" aria-hidden="true"></i>
                             <input type="text" value="1">
@@ -214,9 +220,7 @@
                 <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo">
                     <p class="sub__PlanTitle">الماسية الماسية الماسية</p>
                     <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo__PlanMoreInfo">
-                        <p>يباع سريعا</p>
                         <p>SAR 1,100.00</p>
-                        <p>+18</p>
                         <div class="input__number">
                             <i class="fa fa-plus plus" aria-hidden="true"></i>
                             <input type="text" value="1" >
@@ -227,9 +231,7 @@
                 <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo">
                     <p class="sub__PlanTitle">الماسية الماسية الماسية</p>
                     <div class="dateTicket__container__CardPlanTime__Plan__PlanInfo__PlanMoreInfo">
-                        <p>يباع سريعا</p>
-                        <p>SAR 1,100.00</p>
-                        <p>+18</p>
+                        <p>SAR 1,100.00</p>                   
                         <div class="input__number">
                             <i class="fa fa-plus plus" aria-hidden="true"></i>
                             <input type="text"  value="1" >
@@ -289,6 +291,132 @@
 				return false;
 			});
 		});
+    </script>
+
+    <script>
+        const date = new Date();
+
+        const renderCalendar = () => {
+        date.setDate(1);
+
+        const monthDays = document.querySelector(".days");
+
+        const lastDay = new Date(
+            date.getFullYear(),
+            date.getMonth() + 1,
+            0
+        ).getDate();
+
+        const prevLastDay = new Date(
+            date.getFullYear(),
+            date.getMonth(),
+            0
+        ).getDate();
+
+        const firstDayIndex = date.getDay();
+
+        const lastDayIndex = new Date(
+            date.getFullYear(),
+            date.getMonth() + 1,
+            0
+        ).getDay();
+
+        // const nextDays = 7 - lastDayIndex - 1;
+        const nextDays = 7 ;
+
+        const months = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+        ];
+
+        document.querySelector(".date h1").innerHTML = months[date.getMonth()] + '-' + date.getFullYear();
+
+        // document.querySelector(".date p").innerHTML = new Date().toDateString();
+
+        let days = "";
+       
+
+        for (let x = firstDayIndex; x > 0; x--) {
+            days += `<div onclick="selectDay(event)" class="prev-date" data-target="${prevLastDay - x + 1}/${date.getMonth()+1}/${date.getFullYear()}">${prevLastDay - x + 1}</div>`;
+        }
+
+        for (let i = 1; i <= lastDay; i++) {
+            // console.log({date:new Date().getDate(), month:date.getMonth(),get:new Date().getMonth()});
+            if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
+                days += `<div onclick="selectDay(event)" class="today" data-target="${i}/${date.getMonth()+1}/${date.getFullYear()}">${i}</div>`;
+            } else {
+                days += `<div onclick="selectDay(event)" data-target="${i}/${date.getMonth()+1}/${date.getFullYear()}">${i}</div>`;
+            }
+        }
+
+
+        for (let j = 1; j <= nextDays; j++) {
+            days += `<div onclick="selectDay(event)" class="next-date" data-target="${j}/${date.getMonth()+1}/${date.getFullYear()}" >${j}</div>`;
+            monthDays.innerHTML = days;
+        }
+        };
+        
+        document.querySelector(".prev").addEventListener("click", () => {
+        date.setMonth(date.getMonth() - 1);
+        renderCalendar();
+        getAllTicket();
+        });
+
+        document.querySelector(".next").addEventListener("click", () => {
+        date.setMonth(date.getMonth() + 1);
+        renderCalendar();
+        getAllTicket();
+        });
+
+        function selectDay(e) {
+        console.log(e.target);
+        console.log(e.target.textContent);
+        document.getElementById('input_number_day').value = e.target.textContent;
+        document.querySelectorAll('.days div').forEach((n) => {
+            
+            n.classList.remove('today');
+        })
+        e.target.classList.add('today');
+        }
+
+        function getAllTicket(){
+            let ticket_date = [
+            '25/7/2021',
+            '12/7/2021',
+            '21/7/2021',
+            '22/7/2021',
+            '24/7/2021',
+            '11/7/2021'
+            ];
+            document.querySelectorAll('.days div').forEach((n) => {
+            let dateFormat = n.getAttribute('data-target'); // 30/6/2021
+            // console.log(dateFormat)
+            ticket_date.forEach((Format)=>{
+                if(dateFormat == Format){
+                    n.classList.add('noTicket');
+                }
+               
+                })
+           return false;
+        })
+        }
+
+        date.setMonth(date.getMonth() + 1);
+        renderCalendar();
+        date.setMonth(date.getMonth() - 1);
+        renderCalendar();
+
+        getAllTicket();
     </script>
 </body>
 </html>
