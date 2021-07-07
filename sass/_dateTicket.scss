@@ -511,16 +511,72 @@
     opacity: 0.5;
   }
   
-  .today {
+.today {
     background-color: $btn_body;
     color: white;
 }
 
 .noTicket {
-    background-color: #c9c9c9;
-    color: white;
+    color: #c9c9c9;
     cursor: not-allowed;
-    border: 0;
 }
+
+.hasTicket {
+    background-color: $limeGreen;
+    color: white;
+
+    
+}
+
+
+.calendar{
+    .card__infoCalender{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        @include breakpoint-down(small){
+            display: grid;
+            grid-template-columns: repeat(2 ,1fr);
+        }
+        .supCard__infoCalender{
+            display: flex;
+            align-items: center;
+            margin: 0 0.5rem;
+            
+            &__color{
+                // display: flex;
+                width: 10px;
+                height: 10px;
+                
+           }
+           .color__limeGreen{
+            background-color: $limeGreen;
+           }
+           .color__grayGray{
+            background-color: $grayLight;
+           }
+           .color__limeOrange{
+            background-color: $btn_body;
+           }
+           .color__limeBlack{
+            background-color: $black;
+           }
+           &__name{
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0 0 0 0.5rem;
+            @include breakpoint-down(small){
+                font-size: 1rem;
+                font-weight: 400;
+                margin: 0 0 0 0.3rem;
+            }
+           }
+        }
+      
+    }
+}
+
+
+
 
   
