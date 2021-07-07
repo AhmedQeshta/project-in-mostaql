@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <!-- loader  -->
@@ -137,14 +139,11 @@
                         </div>
 
                         <div class="supCard__infoCalender">
-                            <p class="supCard__infoCalender__name">متخار تذكرة</p>
+                            <p class="supCard__infoCalender__name">تم إختيار التذكرة</p>
                             <p class="supCard__infoCalender__color color__limeOrange"></p>
                         </div>
                         
-                        <div class="supCard__infoCalender">
-                            <p class="supCard__infoCalender__name">لم يتم الاضافة بعد </p>
-                            <p class="supCard__infoCalender__color color__limeBlack"></p>
-                        </div>
+                        
                     </div>
                     <div>
                         <!-- give the number selected (day) for search if has date for this day -->
@@ -166,7 +165,7 @@
                             <div>Fri</div>
                             <div>Sat</div>
                           </div>
-                          <div class="days"></div>
+                          <div class="days" ></div>
                     </div>
                 </div>
               <!-- </div> -->
@@ -375,12 +374,11 @@
         for (let i = 1; i <= lastDay; i++) {
             // console.log({date:new Date().getDate(), month:date.getMonth(),get:new Date().getMonth()});
             if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-                days += `<div onclick="selectDay(event)" class="today" data-target="${i}/${date.getMonth()}/${date.getFullYear()}">${i}</div>`;
+                days += `<div onclick="selectDay(event)" data-target="${i}/${date.getMonth()}/${date.getFullYear()}">${i}</div>`;
             } else {
                 days += `<div onclick="selectDay(event)" data-target="${i}/${date.getMonth()}/${date.getFullYear()}">${i}</div>`;
             }
         }
-
 
         for (let j = 1; j <= nextDays; j++) {
             days += `<div onclick="selectDay(event)" class="next-date" data-target="${j}/${date.getMonth()+1}/${date.getFullYear()}" >${j}</div>`;
@@ -391,44 +389,29 @@
      
 
         function selectDay(e) {
-        console.log(e.target);
-        console.log(e.target.textContent);
-        document.getElementById('input_number_day').value = e.target.textContent;
-        document.querySelectorAll('.days div').forEach((n) => {
-            n.classList.remove('today');
-            getAllTicket();
-            getHasTicket();
-        })
-        if(!(e.target.classList.contains('noTicket')) && e.target.classList.contains('hasTicket')){
-            e.target.classList.add('today');
-            e.target.classList.remove('hasTicket');
-        }
+            // console.log(e.target);
+            // console.log(e.target.textContent);
+            document.querySelectorAll('.days div').forEach((n) => {
+                n.classList.remove('today');
+                getHasTicket();
+            })
+            let notHaveTicket = e.target.classList.contains('noTicket');
+            let HaveTicket = e.target.classList.contains('hasTicket');
+
+            if((!notHaveTicket && HaveTicket) || (notHaveTicket && HaveTicket)){
+                e.target.classList.add('today');
+                e.target.classList.remove('hasTicket');
+                e.target.style.color="white";
+
+                document.getElementById('input_number_day').value = e.target.textContent;
+            }
        
         }
 
-        function getAllTicket(){
-            let ticket_date = [
-            '25/6/2021',
-            '12/6/2021',
-            '21/6/2021',
-            '22/6/2021',
-            '24/6/2021',
-            '11/6/2021'
-            ];
-            document.querySelectorAll('.days div').forEach((n) => {
-            let dateFormat = n.getAttribute('data-target'); // 30/6/2021
-            // console.log(dateFormat)
-            ticket_date.forEach((Format)=>{
-                if(dateFormat == Format){
-                    n.classList.add('noTicket');
-                }
-               
-                })
-           return false;
-        })
-        }
+        
 
         function getHasTicket(){
+            // array of day  have  ticket tack From data base
             //  in date start in 0  , then 
             // [0,1,2,3,4,5,6,7,8,9,10,11]
             // | | | | | | | | | | | | | 
@@ -449,6 +432,10 @@
             ticket_date.forEach((Format)=>{
                 if(dateFormat == Format){
                     n.classList.add('hasTicket');
+                   
+                }else{
+                    n.classList.add('noTicket');
+                    
                 }
             })
                 
@@ -461,14 +448,12 @@
         document.querySelector(".prev").addEventListener("click", () => {
         date.setMonth(date.getMonth() - 1);
         renderCalendar();
-        getAllTicket();
         getHasTicket();
         });
 
         document.querySelector(".next").addEventListener("click", () => {
         date.setMonth(date.getMonth() + 1);
         renderCalendar();
-        getAllTicket();
         getHasTicket();
         });
 
@@ -477,9 +462,30 @@
         renderCalendar();
         date.setMonth(date.getMonth() - 1);
         renderCalendar();
-
-        getAllTicket();
         getHasTicket();
+
+        // getAllTicket();
+        // function getAllTicket(){
+        //     // array of day  not  have  ticket tack From data base
+        //     let notHaveTicket_date = [
+        //     '25/6/2021',
+        //     '12/6/2021',
+        //     '21/6/2021',
+        //     '22/6/2021',
+        //     '24/6/2021',
+        //     '11/6/2021'
+        //     ];
+        //     document.querySelectorAll('.days div').forEach((n) => {
+        //     let dateFormat = n.getAttribute('data-target'); // 30/6/2021
+        //     // console.log(dateFormat)
+        //     notHaveTicket_date.forEach((Format)=>{
+        //         if(dateFormat == Format){
+        //             n.classList.add('noTicket');
+        //         }
+        //     })
+        //    return false;
+        // })
+        // }
     </script>
 </body>
 </html>
