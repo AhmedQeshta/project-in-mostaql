@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Body</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="dist/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="dist/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="dist/css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- loader  -->
+    <div id="loadingScrean" class="display">
+        <div class="loader">
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__ball"></div>
+          </div>
+    </div>
+
+
+<!-- header -->
+    <header class="container__header"> 
+        <div class="header"> 
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="dist/images/logo.png" alt="logo web page">
+                </a>
+            </div>
+            
+            
+            <form class="header__search" action="#">
+                <i class="header__search__icon fa fa-search" aria-hidden="true"></i>
+                <input class="header__search__input" type="text" placeholder="إبحث هنا ...">
+            </form>
+            
+    
+            <div class="header__btnAuth">
+                <a class="header__btnAuth__login" href="#">دخول</a>
+                <a class="header__btnAuth__signUp" href="#">مستخدم جديد</a>
+            </div>
+
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="container__header__menu has-fade">
+            <div class="container__header__menu__btnAuth">
+                <a class="container__header__menu__btnAuth__login" href="#">دخول</a>
+                <a class="container__header__menu__btnAuth__signUp" href="#">مستخدم جديد</a>
+            </div>
+        </div>
+    </header>
+<!-- for search responsive less than medium-->
+    <div class="container__header__search hidden__header__search">
+        <form class="container__header__search__form" action="#">
+            <i class="container__header__search__form__icon fa fa-search" aria-hidden="true"></i>
+            <input class="container__header__search__form__input" type="text" placeholder="Search">
+        </form>
+    </div>
+
+   
+    <!-- body -->
+    <div class="paymentMethodBody">
+        <div class="paymentBody__back__arrow">
+            <a href="dateTicket.html">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div class="paymentBody">
+            <div class="paymentBody__leftSection direction-rtl">
+                <h2 class="paymentBody__leftSection__title ">تفاصيل الطلب</h2>
+                <div class="paymentBody__leftSection__body">
+                    <div class="body__head">
+                        <p>نهاية الاسبوع</p>
+                        <p>112.00 SAR</p>
+                    </div>
+                    <div class="body__subHead">
+                        <p>عادي</p>
+                    </div>
+                    <div class="body__line">
+                        <hr>
+                    </div>
+                    <div class="body__date">
+                        <div class="body__day">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <p>السبت 21 يناير</p>
+                        </div>
+                        <div class="body__time">
+                            <i class="fa fa-clock" aria-hidden="true"></i>
+                            <p>14:00</p>
+                        </div>
+                    </div>
+                </div>
+                <label class="paymentBody__leftSection__container">
+                    <span class="checkmark__title">أنا موافق على القواعد والشروط</span>
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="paymentBody__leftSection__terms">
+                    <h2 class="paymentBody__leftSection__terms__title">الشروط و القواعد</h2>
+                    <p class="paymentBody__leftSection__terms__body">
+                        نص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخولص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخولص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخوليصش صش يش ي
+                    </p>
+                </div>
+            </div>
+            <div class="paymentBody__rightSection direction-rtl">
+                <h2 class="paymentBody__rightSection__title">إختر طريقة دفع</h2>
+                <div class="paymentBody__rightSection__body">
+                    <!-- all payment loop hear -->
+                    <div id="mada_payment" class="paymentmethod__card">
+                        <div  class="paymentMethod__card__head">
+                            <label class="card__headContainer">
+                                <span>مدى</span>    
+                                <input id="radio_mada" type="radio" name="radio">
+                                <span class="checkmark"></span>
+                              </label>  
+                              <div class="card__head__image">
+                                  <img src="dist/images/visa.png" alt="payment image">
+                                  <img src="dist/images/masterCard.png" alt="payment image">
+                                  <img src="dist/images/mada.jpg" alt="payment image">
+                              </div>
+                        </div>
+
+                        <div id="mada_body" class="paymentMethod__card__body hiddenPaymentMethod">
+                           <!-- add card getaway payment methoed -->
+                            <div class="form-container">
+                                <div class="field-container">
+                                    <label for="name">إسم حامل البطاقة</label>
+                                    <input id="name" placeholder="مثال اسم من المستخدم" maxlength="20" type="text">
+                                </div>
+                                <div class="field-container">
+                                    <label for="cardnumber">رقم البطاقة</label>
+                                    <input id="cardnumber" placeholder="xxxx xxxx xxxx xxxx" type="text" pattern="[0-9]*" inputmode="numeric">
+                                </div>
+                                <div class="field-container">
+                                    <label for="expirationdate">تاريخ إنتهاء البطاقة (سنة/شهر)</label>
+                                    <input id="expirationdate" placeholder="11/21" type="text" pattern="[0-9]*" inputmode="numeric">
+                                </div>
+                                <div class="field-container">
+                                    <label for="securitycode">الرقم السري</label>
+                                    <input id="securitycode" placeholder="xxxx" type="text" pattern="[0-9]*" inputmode="numeric">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="paypal_payment" class="paymentmethod__card">
+                        <div class="paymentMethod__card__head">
+                            <label class="card__headContainer">
+                                <span>بايبال</span>    
+                                <input id="radio_paypal" type="radio" name="radio">
+                                <span class="checkmark"></span>
+                              </label>  
+                              <div class="card__head__image">
+                                  <img src="dist/images/paypal.png" alt="payment image">
+                                  
+                              </div>
+                        </div>
+
+                        <div id="paypal_body" class="paymentMethod__card__body hiddenPaymentMethod">
+                           <!-- add card getaway payment methoed -->
+                            <a class="paymentMethod__card__body_link" href="#">Pay By PayPal</a>
+                        </div>
+
+                    </div>
+
+                  
+                </div>
+                <div class="paymentBody__rightSection__checkout">
+                    <h3 class="checkout__title">ملخص العملية</h3>
+                    <div class="checkout__subInfo">
+                        <div>
+                            <p>سعر التذكرة</p>
+                            <p>112.00 SAR</p>
+                        </div>
+                        <div>
+                            <p>رسوم رسوم</p>
+                            <p>8.96 SAR</p>
+                        </div>
+                        <div>
+                            <p>لإرسال الدعوة على الواتساب</p>
+                            <p>2.96 SAR</p>
+                        </div>
+                    </div>
+                    <div class="checkout__line">
+                        <hr>
+                    </div>
+                    <div class="checkout__mainInfo">
+                        <div>
+                            <p>  <span> القيمة الكلية</span> <i class="fa fa-info" aria-hidden="true"></i></p>
+                            <p>106.00 SAR</p>
+                        </div>
+                        <div>
+                            <p>قيمة الضريبة</p>
+                            <p>8.96 SAR</p>
+                        </div>
+                    </div>
+                    <div class="checkout__line">
+                        <hr>
+                    </div>
+                    <div class="checkout__total">
+                        <p>
+                            <span> القيمة الكلية</span>
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </p>
+                        <p>122.96 SAR</p>
+                    </div>
+
+                    <a href="#" class="checkout__payLink">دفع</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   
+    
+
+
+
+
+
+<!-- Footer -->
+    <footer class="container__footer">
+        <div class="footer">
+            <div class="footer__left">
+                <img src="dist/images/logo.png" alt="logo">
+                <p>© 2021 All rights reserved. <a href="#">privacy policy</a></p>
+            </div>
+            <div class="footer__right">
+                <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+  
+
+<!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dist/js/script.js"></script>
+    <script>
+        //  jquery code
+        $(document).ready(function () {
+        $(window).on('load', function () {
+            setTimeout(function () {
+            $('#loadingScrean').addClass('displayNone');
+            $('#loadingScrean').removeClass('display');
+            }, 500); // 0.5 sec
+        })
+        })
+    </script>
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+        window.onload = function () {
+        const name = document.getElementById('name');
+        const cardnumber = document.getElementById('cardnumber');
+        const expirationdate = document.getElementById('expirationdate');
+        const securitycode = document.getElementById('securitycode');
+        const output = document.getElementById('output');
+        const ccicon = document.getElementById('ccicon');
+        const ccsingle = document.getElementById('ccsingle');
+        const generatecard = document.getElementById('generatecard');
+
+
+        let cctype = null;
+
+        //Mask the Credit Card Number Input
+        var cardnumber_mask = new IMask(cardnumber, {
+            mask: [
+                {
+                    mask: '0000 000000 00000',
+                    regex: '^3[47]\\d{0,13}',
+                    cardtype: 'american express'
+                },
+                {
+                    mask: '0000 0000 0000 0000',
+                    regex: '^(?:6011|65\\d{0,2}|64[4-9]\\d?)\\d{0,12}',
+                    cardtype: 'discover'
+                },
+                {
+                    mask: '0000 000000 0000',
+                    regex: '^3(?:0([0-5]|9)|[689]\\d?)\\d{0,11}',
+                    cardtype: 'diners'
+                },
+                {
+                    mask: '0000 0000 0000 0000',
+                    regex: '^(5[1-5]\\d{0,2}|22[2-9]\\d{0,1}|2[3-7]\\d{0,2})\\d{0,12}',
+                    cardtype: 'mastercard'
+                },
+                {
+                    mask: '0000 000000 00000',
+                    regex: '^(?:2131|1800)\\d{0,11}',
+                    cardtype: 'jcb15'
+                },
+                {
+                    mask: '0000 0000 0000 0000',
+                    regex: '^(?:35\\d{0,2})\\d{0,12}',
+                    cardtype: 'jcb'
+                },
+                {
+                    mask: '0000 0000 0000 0000',
+                    regex: '^(?:5[0678]\\d{0,2}|6304|67\\d{0,2})\\d{0,12}',
+                    cardtype: 'maestro'
+                },
+                // {
+                //     mask: '0000-0000-0000-0000',
+                //     regex: '^220[0-4]\\d{0,12}',
+                //     cardtype: 'mir'
+                // },
+                {
+                    mask: '0000 0000 0000 0000',
+                    regex: '^4\\d{0,15}',
+                    cardtype: 'visa'
+                },
+                {
+                    mask: '0000 0000 0000 0000',
+                    regex: '^62\\d{0,14}',
+                    cardtype: 'unionpay'
+                },
+                {
+                    mask: '0000 0000 0000 0000',
+                    cardtype: 'Unknown'
+                }
+            ],
+            dispatch: function (appended, dynamicMasked) {
+                var number = (dynamicMasked.value + appended).replace(/\D/g, '');
+
+                for (var i = 0; i < dynamicMasked.compiledMasks.length; i++) {
+                    let re = new RegExp(dynamicMasked.compiledMasks[i].regex);
+                    if (number.match(re) != null) {
+                        return dynamicMasked.compiledMasks[i];
+                    }
+                }
+            }
+        });
+
+        
+
+        //Mask the security code
+        var securitycode_mask = new IMask(securitycode, {
+            mask: '0000',
+        });
+
+     
+
+        
+      
+
+    };
+
+       
+     
+
+        
+
+       
+
+     
+
+      
+    </script>
+
+    <script>
+        window.onload = function(){
+            mada_body.classList.remove('hiddenPaymentMethod');
+            radio_mada.checked = true;
+            radio_paypal.checked = false;
+        }
+        const mada_payment = document.getElementById('mada_payment'); 
+        const mada_body = document.getElementById('mada_body'); 
+        const radio_mada = document.getElementById('radio_mada'); 
+        mada_payment.addEventListener('click',function (e) {
+            console.log(mada_payment);
+            mada_body.classList.toggle('hiddenPaymentMethod');
+            paypal_body.classList.add('hiddenPaymentMethod');
+            radio_mada.checked = true;
+            radio_paypal.checked = false;
+        })
+
+        const paypal_payment = document.getElementById('paypal_payment'); 
+        const paypal_body = document.getElementById('paypal_body'); 
+        const radio_paypal = document.getElementById('radio_paypal'); 
+        paypal_payment.addEventListener('click',function () {
+            paypal_body.classList.toggle('hiddenPaymentMethod');
+            mada_body.classList.add('hiddenPaymentMethod');
+            radio_paypal.checked = true;
+            radio_mada.checked = false;
+        })
+
+     
+    </script>
+</body>
+</html>
