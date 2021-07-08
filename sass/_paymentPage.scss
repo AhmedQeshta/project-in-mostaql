@@ -11,13 +11,13 @@
     .paymentBody__back__arrow{
         display: flex;
         align-items: center;
-        
-         .fa-arrow-left{
+        justify-content: flex-end;
+         .fa-arrow-right{
          font-size: 1.1rem;
          font-weight: 500;
          color: $grayLight;
          margin-top: 1.5rem;
-         margin-bottom: 0;
+         margin-bottom: 0.5rem;
          cursor: pointer;
          padding: 0.5rem;
          transition: all ease 0.3s;
@@ -405,24 +405,6 @@
                 .checkout__line{
                     width: 100%;
                 }
-                .checkout__mainInfo{
-                    display: flex;
-                    flex-direction: column;
-                    div{
-                        display: flex;
-                        justify-content: space-between;
-                        p{
-                            font-size: 1.1rem;
-                            font-weight: 400;
-                            i.fa-info{
-                                color: $grayLight;
-                                font-size: 0.8rem;
-                                margin-right: 0.2rem;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                }
                 .checkout__total{
                     display: flex;
                     justify-content: space-between;
@@ -465,6 +447,7 @@
     border-radius: 8px;
     margin-bottom: 3rem;
     &:hover{
+        color: white;
         background-color: $btn_body_Hover;
     }
 }

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bracelet</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="dist/css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- header -->
+    <header class="container__header"> 
+        <div class="header"> 
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="dist/images/logo.png" alt="logo web page">
+                </a>
+            </div>
+            
+            <form class="header__search" action="#">
+                <i class="header__search__icon fa fa-search" aria-hidden="true"></i>
+                <input class="header__search__input" type="text" placeholder="إبحث هنا ...">
+            </form>
+            
+    
+            <div class="header__btnAuth">
+                <a class="header__btnAuth__login" href="#">دخول</a>
+                <a class="header__btnAuth__signUp" href="#">مستخدم جديد</a>
+            </div>
+
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="container__header__menu has-fade">
+            <div class="container__header__menu__btnAuth">
+                <a class="container__header__menu__btnAuth__login" href="#">دخول</a>
+                <a class="container__header__menu__btnAuth__signUp" href="#">مستخدم جديد</a>
+            </div>
+        </div>
+    </header>
+
+
+   
+    <!-- body -->
+    <div class="ticketCardBodyContainer direction-rtl">
+      
+      <div class="ticket__dataConainer">
+            <div class="ticket__details direction-rtl">
+               
+                <!-- tickets -->
+                <div class="tickets_container">
+                    <div class="ticket__details__date">
+                        <p class="date__calender">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> <span>السبت 9 يناير</span>
+                        </p>
+                        <p class="date__clock">
+                            <i class="fa fa-clock" aria-hidden="true"></i> <span>13:45</span>
+                       </p>
+                    </div>
+                    <div class="hr_line_1">
+                        <hr>
+                    </div>
+                    <h2 class="tickets_title">اسم النشاط يتم وضعه هنا</h2>
+                    <div>
+                        <div class="tickets_card">
+                            <p class="tickets_card__name">الماسية</p>
+                            <p class="tickets_card__number">عدد التذاكر : 3</p>
+                        </div>
+                        <div class="tickets_card">
+                            <p class="tickets_card__name" >عادي</p>
+                            <p class="tickets_card__number" >عدد التذاكر : 2</p>
+                        </div>
+                        <div class="tickets_card">
+                            <p class="tickets_card__name" >سوبر</p>
+                            <p class="tickets_card__number" >عدد التذاكر : 1</p>
+                        </div>
+                         <div class="tickets_card">
+                            <p class="tickets_card__name">الماسية</p>
+                            <p class="tickets_card__number">عدد التذاكر : 3</p>
+                        </div>
+                        <div class="tickets_card">
+                            <p class="tickets_card__name" >عادي</p>
+                            <p class="tickets_card__number" >عدد التذاكر : 2</p>
+                        </div>
+                        <div class="tickets_card">
+                            <p class="tickets_card__name" >سوبر</p>
+                            <p class="tickets_card__number" >عدد التذاكر : 1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hr_line_2">
+                        <hr>
+                    </div>
+                    <div class="ticket__barcode">
+                        <div class="image__qrCode">
+                            <img src="dist/images/qrCode.png" alt="barcode">
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+        <a title="back to Home Page" class="back_link" href="index.html">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </a>
+    </div>
+
+
+<!-- Footer -->
+    <footer class="container__footer">
+        <div class="footer">
+            <div class="footer__left">
+                <img src="dist/images/logo.png" alt="logo">
+                <p>© 2021 All rights reserved. <a href="#">privacy policy</a></p>
+            </div>
+            <div class="footer__right">
+                <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+
+<!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dist/js/script.js"></script>
+</body>
+</html>

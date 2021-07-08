@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tathkartkom.com</title>
+    <title>Bracelet</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="dist/css/main.min.css">
@@ -16,18 +16,6 @@
 
 </head>
 <body>
-<!-- loader  -->
-    <!-- <div id="loadingScrean" class="display">
-        <div class="loader">
-            <div class="loader__bar"></div>
-            <div class="loader__bar"></div>
-            <div class="loader__bar"></div>
-            <div class="loader__bar"></div>
-            <div class="loader__bar"></div>
-            <div class="loader__ball"></div>
-          </div>
-    </div> -->
-
 
 <!-- header -->
     <header class="container__header"> 
@@ -195,7 +183,7 @@
                         <p>SAR 1,100.00</p>
                         <div class="input__number">
                             <i class="fa fa-plus plus" aria-hidden="true"></i>
-                            <input type="text" value="1">
+                            <input type="text" value="0">
                             <i class="fa fa-minus minus" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -206,7 +194,7 @@
                         <p>SAR 1,100.00</p>
                         <div class="input__number">
                             <i class="fa fa-plus plus" aria-hidden="true"></i>
-                            <input type="text" value="1" >
+                            <input type="text" value="0" >
                             <i class="fa fa-minus minus" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -217,7 +205,7 @@
                         <p>SAR 1,100.00</p>                   
                         <div class="input__number">
                             <i class="fa fa-plus plus" aria-hidden="true"></i>
-                            <input type="text"  value="1" >
+                            <input type="text"  value="0" >
                             <i class="fa fa-minus minus" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -262,7 +250,7 @@
 			$('.minus').click(function () {
 				var $input = $(this).parent().find('input');
 				var count = parseInt($input.val()) - 1;
-				count = count < 1 ? 1 : count;
+				count = count < 0 ? 0 : count;
 				$input.val(count);
 				$input.change();
 				return false;

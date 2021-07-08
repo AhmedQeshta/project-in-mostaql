@@ -9,18 +9,19 @@
         width: 90%;
     }
     @include breakpoint-down(small){
-        width: 95%;
+        width: 90%;
     }
     &__head{
         display: flex;
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         justify-content: flex-end;
         align-items: center;
         direction: ltr;
         font-family: 'Tajawal', sans-serif;
         @include breakpoint-down(small){
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
         }
         p{
           color: $grayishBlue;
@@ -32,42 +33,42 @@
         }
         .fa-arrow-right{
             color: grayishBlue;
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             font-weight: 600;
             opacity: 0.5;
         }
     }
 
-    &__calender{
-        display: flex;
-        flex-direction: column;
-        input[type='date']{
-            width: 50%;
-            height: 2.9rem;
-            background-color: $grayLight;
-            color: white;
-            padding: 0.8rem;
-            border: 0;
-            cursor: pointer;
-            &::placeholder{
-                color: white;
-            }
-            &:focus{
-                outline: none;
-                border: 0;
-                box-shadow: 0;
-            }
-            font-family: 'Tajawal', sans-serif;
-        }
+    // &__calender{
+    //     display: flex;
+    //     flex-direction: column;
+    //     // input[type='date']{
+    //     //     width: 50%;
+    //     //     height: 2.9rem;
+    //     //     background-color: $grayLight;
+    //     //     color: white;
+    //     //     padding: 0.8rem;
+    //     //     border: 0;
+    //     //     cursor: pointer;
+    //     //     &::placeholder{
+    //     //         color: white;
+    //     //     }
+    //     //     &:focus{
+    //     //         outline: none;
+    //     //         border: 0;
+    //     //         box-shadow: 0;
+    //     //     }
+    //     //     font-family: 'Tajawal', sans-serif;
+    //     // }
 
-    }
+    // }
 
     &__CardTime{
         font-family: 'Tajawal', sans-serif;
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin: 2rem auto;
+        margin: 1rem auto;
         a{
             padding: 0 1rem;
             display: flex;
@@ -94,7 +95,7 @@
                         padding-left: 35px;
                         margin-bottom: 12px;
                         cursor: pointer;
-                        font-size: 22px;
+                        font-size: 18px;
                         -webkit-user-select: none;
                         -moz-user-select: none;
                         -ms-user-select: none;
@@ -116,8 +117,8 @@
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    height: 25px;
-                    width: 25px;
+                    height: 20px;
+                    width: 20px;
                     background-color: $grayLight;
                     border-radius: 50%;
                     transition: all ease 0.3;
@@ -151,8 +152,8 @@
 
                     /* Style the indicator (dot/circle) */
                     .Card__container .checkmark:after {
-                        top: 9px;
-                        left: 9px;
+                        top: 6.5px;
+                        left: 6.5px;
                         width: 8px;
                         height: 8px;
                         border-radius: 50%;
@@ -182,8 +183,6 @@
                 justify-content: start;
                 align-items: center;
                 font-family: 'Tajawal', sans-serif;
-                // border-top:1px solid $grayishBlue ;
-                // border-bottom:1px solid $grayishBlue ;
                 @include breakpoint-down(medium){
                     flex-direction: column;
 
@@ -282,6 +281,8 @@
                     background-color: $btn_body;
                     color: white;
                     transition: all ease 0.3s;
+                    font-weight: 700;
+                    font-size: 1.1rem;
                     &:hover{
                         background-color: $btn_body_Hover;
                     }
@@ -306,6 +307,7 @@
     color: $card_available_color;
     font-weight: 700;
     padding: 0.25rem 0.4rem;
+    font-size: 0.9rem;
 }
 
 .CardTime__left__open{
@@ -313,6 +315,7 @@
     font-weight: 700;
     background-color: $card_available_color;
     padding: 0.25rem 0.4rem;
+    font-size: 0.9rem;
 }
 
 
@@ -326,21 +329,21 @@
   .month {
     width: 100%;
     margin: 0 auto;
-    height: 3.5rem;
+    height: 2.5rem;
     background-color: #faf8f8;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.2rem;
+    padding: 0 1rem;
     text-align: center;
     font-family: 'Tajawal', sans-serif;
     i {
-        font-size: 1.1rem;
+        font-size: 1rem;
         cursor: pointer;
       }
 
       h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
@@ -351,19 +354,19 @@
 
   
   .weekdays {
-    width: 70%;
+    width: 50%;
     @include breakpoint-down(medium){
         width: 100%;
     }
     margin: 0 auto;
-    height: 3rem;
+    height: 2rem;
     padding: 0 0.2rem;
     display: flex;
     align-items: center;
     font-family: 'Tajawal', sans-serif;
     div {
         
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
         letter-spacing: 0.1rem;
         font-family: 'Tajawal', sans-serif;
@@ -388,7 +391,7 @@
   
   .days {
       
-    width: 70%;
+    width: 50%;
     @include breakpoint-down(medium){
         width: 100%;
     }
@@ -399,8 +402,8 @@
     padding: 0.1rem;
     font-family: 'Tajawal', sans-serif;
     div {
-        font-size: 1.4rem;
-        margin: 0.3rem;   
+        font-size: 1.2rem;
+        margin: 0.2rem;   
         font-family: 'Tajawal', sans-serif;
         @include breakpoint-down(medium){
             width: calc(75% / 7);
@@ -418,7 +421,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // text-shadow: 0 0.3rem 0.5rem rgba(0 0 0 / 50%);
         transition: background-color 0.2s;
       }
     div:hover:not(.today) {
@@ -468,8 +470,8 @@
             font-family: 'Tajawal', sans-serif;
             &__color{
                 // display: flex;
-                width: 10px;
-                height: 10px;
+                width: 8px;
+                height: 8px;
                 
            }
            .color__limeGreen{
@@ -485,12 +487,12 @@
             background-color: $black;
            }
            &__name{
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 500;
             margin: 0 0 0 0.5rem;
             font-family: 'Tajawal', sans-serif;
             @include breakpoint-down(small){
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: 400;
                 margin: 0 0 0 0.3rem;
             }

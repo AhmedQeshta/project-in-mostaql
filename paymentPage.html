@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Body</title>
+    <title>Bracelet</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="dist/css/owl.carousel.min.css">
@@ -15,18 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- loader  -->
-    <div id="loadingScrean" class="display">
-        <div class="loader">
-            <div class="loader__bar"></div>
-            <div class="loader__bar"></div>
-            <div class="loader__bar"></div>
-            <div class="loader__bar"></div>
-            <div class="loader__bar"></div>
-            <div class="loader__ball"></div>
-          </div>
-    </div>
-
 
 <!-- header -->
     <header class="container__header"> 
@@ -73,9 +61,9 @@
    
     <!-- body -->
     <div class="paymentMethodBody">
-        <div class="paymentBody__back__arrow">
+        <div class="paymentBody__back__arrow ">
             <a href="dateTicket.html">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
 
@@ -127,41 +115,16 @@
                     <div class="checkout__line">
                         <hr>
                     </div>
-                    <!-- <div class="checkout__mainInfo">
-                        <div>
-                            <p>  <span> القيمة الكلية</span> <i class="fa fa-info" aria-hidden="true"></i></p>
-                            <p>106.00 SAR</p>
-                        </div>
-                        <div>
-                            <p>قيمة الضريبة</p>
-                            <p>8.96 SAR</p>
-                        </div>
-                    </div>
-                    <div class="checkout__line">
-                        <hr>
-                    </div> -->
                     <div class="checkout__total">
                         <p>
                             <span>المجموع</span>
                             <i class="fa fa-info" aria-hidden="true"></i>
                         </p>
-                        <p class="total__price">122.96 SAR</p>
+                        <p class="total__price">٣٣٠ ريال</p>
                     </div>
 
                     
                 </div>
-
-                <!-- <label class="paymentBody__leftSection__container">
-                    <span class="checkmark__title">أنا موافق على القواعد والشروط</span>
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                </label> -->
-                <!-- <div class="paymentBody__leftSection__terms">
-                    <h2 class="paymentBody__leftSection__terms__title">الشروط و القواعد</h2>
-                    <p class="paymentBody__leftSection__terms__body">
-                        نص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخولص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخولص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخوليصش صش يش ي
-                    </p>
-                </div> -->
             </div>
             <div class="paymentBody__rightSection direction-rtl">
                 <h2 class="paymentBody__rightSection__title">إختر طريقة دفع</h2>
@@ -227,7 +190,7 @@
 
                   
                 </div>
-                <a href="#" class="checkout__payLink">دفع</a>
+                <a href="ticketCardPage.html" class="checkout__payLink">دفع</a>
             </div>
         </div>
         
@@ -258,17 +221,6 @@
 <!-- script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dist/js/script.js"></script>
-    <script>
-        //  jquery code
-        $(document).ready(function () {
-        $(window).on('load', function () {
-            setTimeout(function () {
-            $('#loadingScrean').addClass('displayNone');
-            $('#loadingScrean').removeClass('display');
-            }, 500); // 0.5 sec
-        })
-        })
-    </script>
 
     <script>
         window.onload = function(){

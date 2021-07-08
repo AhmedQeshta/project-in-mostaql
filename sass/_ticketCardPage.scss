@@ -1,0 +1,153 @@
+.ticketCardBodyContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 3.2rem auto 0 auto;
+    align-items: flex-start;
+    font-family: 'Tajawal', sans-serif;
+    @include breakpoint-down(medium){
+        width: 90%;  
+    }
+  
+
+    .ticket__dataConainer{
+        display: flex;
+        
+        @include breakpoint-down(medium){
+            flex-direction: column;
+            margin-top: 0.5rem;
+        }
+        width: 100%;
+        .hr_line_1{
+            width: 95%;
+            margin: -0.5rem auto;
+           
+        }
+       
+        .hr_line_2{
+            width: 95%;
+            margin: 0 auto;
+        }
+        .ticket__details{
+            width: 100%;
+            margin: 0 auto;
+            @include breakpoint-down(medium){
+                width: 100%;
+            }
+            &__date{
+                display: flex;
+                width: 100%;
+                padding-right: 2rem;
+                margin-bottom: 0;
+                .date__calender{
+                    margin-left: 2rem;
+                    color: $grayishBlue;
+                    i{
+                        color: $grayLight;
+                    }
+                }
+                .date__clock{
+                    color: $grayishBlue;
+                    i{
+                        color: $grayLight;
+                    }
+                }
+            }
+
+            .tickets_container{
+                width: 70%;
+                margin: 0 auto;
+                @include breakpoint-down(medium){
+                    width: 100%;
+                }
+                display: flex;
+                flex-direction: column;
+                border: 1px solid $grayLight;
+                border-radius: 5px;
+                box-shadow: 1px 1px 5px #f0f0f0d8;
+                &:not(:last-child){
+                   margin-bottom: 0.6rem;     
+                }
+                .tickets_title{
+                    padding: 0 2rem;
+                    width: 100%;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: $grayishBlue;
+                    margin: 1.2rem 0 0 0 ;
+                    @include breakpoint-down(medium){
+                        font-size: 1.2rem;
+                    }
+                }
+                .tickets_card{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 0 2rem;
+                    &__name{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        color: $grayishBlue;
+                    }
+                    &__number{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        color: $grayishBlue;
+                    }
+                }
+            }
+        }
+
+        .ticket__barcode{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 1rem 0;
+            width: 100%;
+            // border: 1px solid $grayLight;
+            // box-shadow: 1px 1px 5px #f0f0f0d8;
+            > div:not(:last-child){
+                margin-bottom: 1rem;
+            }
+            @include breakpoint-down(medium){
+                width: 100%;
+                margin-top: 2rem;
+            }
+            .image__barcode{
+                width: 100%;
+                img{
+                    width: 15rem;
+                    min-width: 10rem;
+                    max-width: 15rem;
+                }
+            }
+            .image__qrCode{
+                width: 100%;
+                img{
+                    width: 12rem;
+                    min-width: 8rem;
+                    max-width: 12rem;
+                }
+            }
+        }
+    }
+
+    .back_link{
+        margin-top: 1rem;
+        &:hover i{
+            color: white;
+            background-color:$header_BG;
+        }
+        i{
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all ease 0.3s;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $grayLight;
+
+        }
+    }
+}
