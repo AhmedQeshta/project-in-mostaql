@@ -230,6 +230,7 @@
                     margin-bottom: 0.8rem;
                     cursor: pointer;
                     .paymentMethod__card__head{
+                        user-select: none;
                         display: flex;
                         justify-content: space-between;
                         .card__headContainer{
@@ -426,7 +427,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    width: 50%;
+                    width: 100%;
                         p{
                             font-size: 1.1rem;
                             font-weight: 400;
@@ -442,19 +443,7 @@
                             font-weight: 500;
                         }
                 }
-                .checkout__payLink{
-                    display: block;
-                    padding: 0.7rem;
-                    background-color: $btn_body;
-                    transition: all ease 0.3s;
-                    color: white;
-                    text-align: center;
-                    border-radius: 8px;
-                    margin-bottom: 3rem;
-                    &:hover{
-                        background-color: $btn_body_Hover;
-                    }
-                }
+                
             }
         }
     }
@@ -463,4 +452,19 @@
 
 .hiddenPaymentMethod{
     display: none;
+}
+
+
+.checkout__payLink{
+    display: block;
+    padding: 0.7rem;
+    background-color: $btn_body;
+    transition: all ease 0.3s;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    &:hover{
+        background-color: $btn_body_Hover;
+    }
 }

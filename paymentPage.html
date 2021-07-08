@@ -97,18 +97,60 @@
                         <hr>
                     </div>
                     <div class="body__head">
-                        <p>نهاية الاسبوع</p>
-                        <p>112.00 SAR</p>
-                    </div>
-                    <div class="body__subHead">
-                        <p>عادي</p>
+                        <p>بلاتينيوم</p>
+                        <p> ١١٢ ريال</p>
                     </div>
                     <div class="body__subHead">
                         <p>3 تذاكر</p>
                     </div>
-                    
+                    <div class="body__head">
+                        <p>ماسية</p>
+                        <p> ١١٠ ريال</p>
+                    </div>
+                    <div class="body__subHead">
+                        <p>3 تذاكر</p>
+                    </div>   
+                </div>
+
+                <div class="paymentBody__rightSection__checkout">
+                    <h3 class="checkout__title">ملخص العملية</h3>
+                    <div class="checkout__subInfo">
+                        <div>
+                            <p>بلاتينيوم</p>
+                            <p> ٣٣٦ ريال</p>
+                        </div>
+                        <div>
+                            <p>ماسية </p>
+                            <p> ٣٣٠ ريال</p>
+                        </div>
+                    </div>
+                    <div class="checkout__line">
+                        <hr>
+                    </div>
+                    <!-- <div class="checkout__mainInfo">
+                        <div>
+                            <p>  <span> القيمة الكلية</span> <i class="fa fa-info" aria-hidden="true"></i></p>
+                            <p>106.00 SAR</p>
+                        </div>
+                        <div>
+                            <p>قيمة الضريبة</p>
+                            <p>8.96 SAR</p>
+                        </div>
+                    </div>
+                    <div class="checkout__line">
+                        <hr>
+                    </div> -->
+                    <div class="checkout__total">
+                        <p>
+                            <span>المجموع</span>
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </p>
+                        <p class="total__price">122.96 SAR</p>
+                    </div>
+
                     
                 </div>
+
                 <!-- <label class="paymentBody__leftSection__container">
                     <span class="checkmark__title">أنا موافق على القواعد والشروط</span>
                     <input type="checkbox" checked="checked">
@@ -125,8 +167,8 @@
                 <h2 class="paymentBody__rightSection__title">إختر طريقة دفع</h2>
                 <div class="paymentBody__rightSection__body">
                     <!-- all payment loop hear -->
-                    <div id="mada_payment" class="paymentmethod__card">
-                        <div  class="paymentMethod__card__head">
+                    <div  class="paymentmethod__card">
+                        <div id="mada_payment"  class="paymentMethod__card__head">
                             <label class="card__headContainer">
                                 <span>مدى</span>    
                                 <input id="radio_mada" type="radio" name="radio">
@@ -151,7 +193,7 @@
                                     <input id="cardnumber" placeholder="xxxx xxxx xxxx xxxx" type="text" pattern="[0-9]*" inputmode="numeric">
                                 </div>
                                 <div class="field-container">
-                                    <label for="expirationdate">تاريخ إنتهاء البطاقة (سنة/شهر)</label>
+                                    <label for="expirationdate">تاريخ إنتهاء البطاقة</label>
                                     <input id="expirationdate" placeholder="11/21" type="text" pattern="[0-9]*" inputmode="numeric">
                                 </div>
                                 <div class="field-container">
@@ -163,8 +205,8 @@
 
                     </div>
 
-                    <div id="paypal_payment" class="paymentmethod__card">
-                        <div class="paymentMethod__card__head">
+                    <div  class="paymentmethod__card">
+                        <div id="paypal_payment" class="paymentMethod__card__head">
                             <label class="card__headContainer">
                                 <span>بايبال</span>    
                                 <input id="radio_paypal" type="radio" name="radio">
@@ -185,48 +227,7 @@
 
                   
                 </div>
-                <div class="paymentBody__rightSection__checkout">
-                    <h3 class="checkout__title">ملخص العملية</h3>
-                    <div class="checkout__subInfo">
-                        <div>
-                            <p>سعر التذكرة</p>
-                            <p>112.00 SAR</p>
-                        </div>
-                        <div>
-                            <p>رسوم رسوم</p>
-                            <p>8.96 SAR</p>
-                        </div>
-                        <div>
-                            <p>لإرسال الدعوة على الواتساب</p>
-                            <p>2.96 SAR</p>
-                        </div>
-                    </div>
-                    <div class="checkout__line">
-                        <hr>
-                    </div>
-                    <div class="checkout__mainInfo">
-                        <div>
-                            <p>  <span> القيمة الكلية</span> <i class="fa fa-info" aria-hidden="true"></i></p>
-                            <p>106.00 SAR</p>
-                        </div>
-                        <div>
-                            <p>قيمة الضريبة</p>
-                            <p>8.96 SAR</p>
-                        </div>
-                    </div>
-                    <div class="checkout__line">
-                        <hr>
-                    </div>
-                    <div class="checkout__total">
-                        <p>
-                            <span> القيمة الكلية</span>
-                            <i class="fa fa-info" aria-hidden="true"></i>
-                        </p>
-                        <p class="total__price">122.96 SAR</p>
-                    </div>
-
-                    <a href="#" class="checkout__payLink">دفع</a>
-                </div>
+                <a href="#" class="checkout__payLink">دفع</a>
             </div>
         </div>
         
@@ -267,115 +268,6 @@
             }, 500); // 0.5 sec
         })
         })
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.1.0/imask.min.js"></script>
-    
-    <script>
-        window.onload = function () {
-        const name = document.getElementById('name');
-        const cardnumber = document.getElementById('cardnumber');
-        const expirationdate = document.getElementById('expirationdate');
-        const securitycode = document.getElementById('securitycode');
-        const output = document.getElementById('output');
-        const ccicon = document.getElementById('ccicon');
-        const ccsingle = document.getElementById('ccsingle');
-        const generatecard = document.getElementById('generatecard');
-
-
-        let cctype = null;
-
-        //Mask the Credit Card Number Input
-        var cardnumber_mask = new IMask(cardnumber, {
-            mask: [
-                {
-                    mask: '0000 000000 00000',
-                    regex: '^3[47]\\d{0,13}',
-                    cardtype: 'american express'
-                },
-                {
-                    mask: '0000 0000 0000 0000',
-                    regex: '^(?:6011|65\\d{0,2}|64[4-9]\\d?)\\d{0,12}',
-                    cardtype: 'discover'
-                },
-                {
-                    mask: '0000 000000 0000',
-                    regex: '^3(?:0([0-5]|9)|[689]\\d?)\\d{0,11}',
-                    cardtype: 'diners'
-                },
-                {
-                    mask: '0000 0000 0000 0000',
-                    regex: '^(5[1-5]\\d{0,2}|22[2-9]\\d{0,1}|2[3-7]\\d{0,2})\\d{0,12}',
-                    cardtype: 'mastercard'
-                },
-                {
-                    mask: '0000 000000 00000',
-                    regex: '^(?:2131|1800)\\d{0,11}',
-                    cardtype: 'jcb15'
-                },
-                {
-                    mask: '0000 0000 0000 0000',
-                    regex: '^(?:35\\d{0,2})\\d{0,12}',
-                    cardtype: 'jcb'
-                },
-                {
-                    mask: '0000 0000 0000 0000',
-                    regex: '^(?:5[0678]\\d{0,2}|6304|67\\d{0,2})\\d{0,12}',
-                    cardtype: 'maestro'
-                },
-                // {
-                //     mask: '0000-0000-0000-0000',
-                //     regex: '^220[0-4]\\d{0,12}',
-                //     cardtype: 'mir'
-                // },
-                {
-                    mask: '0000 0000 0000 0000',
-                    regex: '^4\\d{0,15}',
-                    cardtype: 'visa'
-                },
-                {
-                    mask: '0000 0000 0000 0000',
-                    regex: '^62\\d{0,14}',
-                    cardtype: 'unionpay'
-                },
-                {
-                    mask: '0000 0000 0000 0000',
-                    cardtype: 'Unknown'
-                }
-            ],
-            dispatch: function (appended, dynamicMasked) {
-                var number = (dynamicMasked.value + appended).replace(/\D/g, '');
-
-                for (var i = 0; i < dynamicMasked.compiledMasks.length; i++) {
-                    let re = new RegExp(dynamicMasked.compiledMasks[i].regex);
-                    if (number.match(re) != null) {
-                        return dynamicMasked.compiledMasks[i];
-                    }
-                }
-            }
-        });
-
-        
-
-        //Mask the security code
-        var securitycode_mask = new IMask(securitycode, {
-            mask: '0000',
-        });
-
-    
-      
-
-    };
-
-       
-     
-
-        
-
-       
-
-     
-
-      
     </script>
 
     <script>
