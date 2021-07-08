@@ -425,6 +425,7 @@
                 .checkout__total{
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     width: 50%;
                         p{
                             font-size: 1.1rem;
@@ -435,6 +436,10 @@
                                 margin-right: 0.1rem; 
                                 cursor: pointer;
                             }
+                        }
+                        .total__price{
+                            font-size: 1.4rem;
+                            font-weight: 500;
                         }
                 }
                 .checkout__payLink{

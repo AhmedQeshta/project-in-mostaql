@@ -81,18 +81,8 @@
 
         <div class="paymentBody">
             <div class="paymentBody__leftSection direction-rtl">
-                <h2 class="paymentBody__leftSection__title ">تفاصيل الطلب</h2>
+                <h2 class="paymentBody__leftSection__title ">تفاصيل التذاكر</h2>
                 <div class="paymentBody__leftSection__body">
-                    <div class="body__head">
-                        <p>نهاية الاسبوع</p>
-                        <p>112.00 SAR</p>
-                    </div>
-                    <div class="body__subHead">
-                        <p>عادي</p>
-                    </div>
-                    <div class="body__line">
-                        <hr>
-                    </div>
                     <div class="body__date">
                         <div class="body__day">
                             <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -103,18 +93,33 @@
                             <p>14:00</p>
                         </div>
                     </div>
+                    <div class="body__line">
+                        <hr>
+                    </div>
+                    <div class="body__head">
+                        <p>نهاية الاسبوع</p>
+                        <p>112.00 SAR</p>
+                    </div>
+                    <div class="body__subHead">
+                        <p>عادي</p>
+                    </div>
+                    <div class="body__subHead">
+                        <p>3 تذاكر</p>
+                    </div>
+                    
+                    
                 </div>
-                <label class="paymentBody__leftSection__container">
+                <!-- <label class="paymentBody__leftSection__container">
                     <span class="checkmark__title">أنا موافق على القواعد والشروط</span>
                     <input type="checkbox" checked="checked">
                     <span class="checkmark"></span>
-                </label>
-                <div class="paymentBody__leftSection__terms">
+                </label> -->
+                <!-- <div class="paymentBody__leftSection__terms">
                     <h2 class="paymentBody__leftSection__terms__title">الشروط و القواعد</h2>
                     <p class="paymentBody__leftSection__terms__body">
                         نص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخول ص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخولص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخولص عربي نص عربي نص عربي للقواعد الانضباطات , شروط الدخوليصش صش يش ي
                     </p>
-                </div>
+                </div> -->
             </div>
             <div class="paymentBody__rightSection direction-rtl">
                 <h2 class="paymentBody__rightSection__title">إختر طريقة دفع</h2>
@@ -217,7 +222,7 @@
                             <span> القيمة الكلية</span>
                             <i class="fa fa-info" aria-hidden="true"></i>
                         </p>
-                        <p>122.96 SAR</p>
+                        <p class="total__price">122.96 SAR</p>
                     </div>
 
                     <a href="#" class="checkout__payLink">دفع</a>
@@ -263,7 +268,8 @@
         })
         })
     </script>
-    <script src="https://unpkg.com/imask"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.1.0/imask.min.js"></script>
+    
     <script>
         window.onload = function () {
         const name = document.getElementById('name');
@@ -355,9 +361,7 @@
             mask: '0000',
         });
 
-     
-
-        
+    
       
 
     };
