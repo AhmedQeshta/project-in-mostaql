@@ -135,19 +135,21 @@
     }
 
     .back_link{
-        margin-top: 1rem;
-        &:hover i{
-            color: white;
-            background-color:$header_BG;
-        }
-        i{
-            padding: 0.5rem;
-            border-radius: 50%;
-            transition: all ease 0.3s;
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: $grayLight;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+        padding: 0.6rem 0.8rem;
+        border-radius: 5px;
+        transition: all ease 0.3s;
+        font-size: 1.2rem;
+        font-weight: 500;
+        
+        color: white;
+        background-color:$header_BG;
+   
+        &:hover {
+            background-color: $btn_body_Hover;
 
         }
+       
     }
 }

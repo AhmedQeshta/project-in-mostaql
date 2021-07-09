@@ -39,29 +39,6 @@
         }
     }
 
-    // &__calender{
-    //     display: flex;
-    //     flex-direction: column;
-    //     // input[type='date']{
-    //     //     width: 50%;
-    //     //     height: 2.9rem;
-    //     //     background-color: $grayLight;
-    //     //     color: white;
-    //     //     padding: 0.8rem;
-    //     //     border: 0;
-    //     //     cursor: pointer;
-    //     //     &::placeholder{
-    //     //         color: white;
-    //     //     }
-    //     //     &:focus{
-    //     //         outline: none;
-    //     //         border: 0;
-    //     //         box-shadow: 0;
-    //     //     }
-    //     //     font-family: 'Tajawal', sans-serif;
-    //     // }
-
-    // }
 
     &__CardTime{
         font-family: 'Tajawal', sans-serif;
@@ -459,10 +436,10 @@
         justify-content: start;
         align-items: center;
         font-family: 'Tajawal', sans-serif;
-        @include breakpoint-down(small){
-            display: grid;
-            grid-template-columns: repeat(2 ,1fr);
-        }
+        // @include breakpoint-down(small){
+        //     display: grid;
+        //     grid-template-columns: repeat(2 ,1fr);
+        // }
         .supCard__infoCalender{
             display: flex;
             align-items: center;
