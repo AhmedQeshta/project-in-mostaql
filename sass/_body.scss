@@ -6,7 +6,7 @@
     }
    
     @include breakpoint-down(medium){
-        width: 85%;
+        width: 95%;
     }
 
     grid-template-columns: repeat(1,1fr);
@@ -67,6 +67,12 @@
         }
         
           &__name{
+            @include breakpoint-down(medium){
+              font-size: 1.4rem;
+          }
+          @include breakpoint-down(small){
+            font-size: 1.2rem;
+        }
               font-size: 1.8rem;
               margin: 1rem 0 0 0;
           }

@@ -8,7 +8,8 @@
            img{
                width: 100%;
                height: 100%;
-               @include breakpoint-down(small){
+               transition: all ease 0.3s;
+               @include breakpoint-down(medium){
                 max-height: calc(100vh - 85px);
                 min-height: auto;
                 }
