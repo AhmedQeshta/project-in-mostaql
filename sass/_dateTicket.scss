@@ -384,12 +384,12 @@
         font-family: 'Tajawal', sans-serif;
         @include breakpoint-down(medium){
             width: calc(75% / 7);
-            margin: 0 auto;
+            // margin: 0 auto;
             font-size: 1.35rem;
         }
         @include breakpoint-down(small){
             width: calc(86% / 7);
-            margin: 0 auto;
+            // margin: 0 auto;
             font-size: 1.2rem;
         }
         width: calc(88% / 7);
@@ -399,7 +399,23 @@
         justify-content: center;
         align-items: center;
         transition: background-color 0.2s;
+        
       }
+      :nth-of-type(36),
+      :nth-of-type(37),
+      :nth-of-type(38),
+      :nth-of-type(39),
+      :nth-of-type(40)
+    //   ,:nth-of-type(41)
+    //   ,:nth-of-type(42)
+    //   ,:nth-of-type(43)
+      {
+        margin: 0.4rem; 
+    }
+   
+    :last-child{
+        margin: 0.4rem; 
+    }
     div:hover:not(.today) {
         background-color: $grayLight;
         border: 0.2rem solid $grayishBlue;
@@ -498,11 +514,24 @@
         width: 100%;
         div {
             width: calc(89% / 7);
-            margin: 0 auto;
+            // margin: 0 auto;
             height: 3.4rem;
           }
+          :nth-of-type(36),
+      :nth-of-type(37),
+      :nth-of-type(38),
+      :nth-of-type(39),
+      :nth-of-type(40)
+      {
+        margin: 0.01rem; 
+    }
+   
+    :last-child{
+        margin: 0.01rem; 
+    }
       }
 }
+
 
 
 

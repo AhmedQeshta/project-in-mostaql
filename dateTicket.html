@@ -293,7 +293,7 @@
         ).getDay();
 
         // const nextDays = 7 - lastDayIndex - 1;
-        const nextDays = 7 ;
+        const nextDays = 7   ;
 
         const months = [
             "January",
@@ -324,14 +324,14 @@
         for (let i = 1; i <= lastDay; i++) {
             // console.log({date:new Date().getDate(), month:date.getMonth(),get:new Date().getMonth()});
             if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-                days += `<div onclick="selectDay(event)" data-target="${i}/${date.getMonth()}/${date.getFullYear()}">${i}</div>`;
+                days += `<div onclick="selectDay(event)" data-target="${i}/${date.getMonth()+1}/${date.getFullYear()}">${i}</div>`;
             } else {
-                days += `<div onclick="selectDay(event)" data-target="${i}/${date.getMonth()}/${date.getFullYear()}">${i}</div>`;
+                days += `<div onclick="selectDay(event)" data-target="${i}/${date.getMonth()+1}/${date.getFullYear()}">${i}</div>`;
             }
         }
 
         for (let j = 1; j <= nextDays; j++) {
-            days += `<div onclick="selectDay(event)" class="next-date" data-target="${j}/${date.getMonth()+1}/${date.getFullYear()}" >${j}</div>`;
+            days += `<div onclick="selectDay(event)"  class="next-date" data-target="${j}/${date.getMonth()+2}/${date.getFullYear()}" >${j}</div>`;
             monthDays.innerHTML = days;
         }
         };
@@ -349,11 +349,12 @@
             let HaveTicket = e.target.classList.contains('hasTicket');
 
             if((!notHaveTicket && HaveTicket) || (notHaveTicket && HaveTicket)){
+                // if click in day in calender , you have input hidden 
                 e.target.classList.add('today');
                 e.target.classList.remove('hasTicket');
                 e.target.style.color="white";
 
-                document.getElementById('input_number_day').value = e.target.textContent;
+                document.getElementById('input_number_day').value = e.target.textContent; // input hidden
             }
        
         }
@@ -367,14 +368,15 @@
             // | | | | | | | | | | | | | 
             //[1,2,3,4,5,6,7,8,9,10,11,12]
             let ticket_date = [
-            '1/6/2021',
-            '3/6/2021',
-            '4/6/2021',
-            '6/6/2021',
-            '7/6/2021',
-            '10/6/2021',
-            '31/6/2021',
-            '1/7/2021',
+            '30/6/2021',
+            '3/7/2021',
+            '4/7/2021',
+            '6/7/2021',
+            '7/7/2021',
+            '10/7/2021',
+            '31/9/2021',
+            '31/8/2021',
+            '1/8/2021', //  '1/8/2021',  الأول من  شهر 8
             ];
             document.querySelectorAll('.days div').forEach((n) => {
             let dateFormat = n.getAttribute('data-target'); // 30/6/2021
